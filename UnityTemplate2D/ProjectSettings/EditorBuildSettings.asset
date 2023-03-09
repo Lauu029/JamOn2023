@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Oscar.unity
+    guid: 4e8eea2643835f249a6618d57e8d86da
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fd79ed2fe7b68124a8739be15a957d19, type: 2}

@@ -31,11 +31,11 @@ public class Movement : MonoBehaviour
         rb.velocity = inputDirection;
 
         //Jump
-        if (jump)
-        {
-            rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
-            jump = false;
-        }
+        //if (jump)
+        //{
+        //    rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
+        //    jump = false;
+        //}
 
     }
 

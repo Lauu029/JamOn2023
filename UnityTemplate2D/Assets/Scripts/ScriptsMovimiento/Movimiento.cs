@@ -61,6 +61,11 @@ public class Movimiento : MonoBehaviour
         }
 
         playerAnim.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
+        if (rb.velocity.x != 0.0f)
+            playerAnim.speed = Mathf.Abs(rb.velocity.x) / maxVelocity;
+        else
+            playerAnim.speed = 1;
+        Debug.Log(playerAnim.speed);
 
         if(!decel)
             _ = rb.velocity.x < 0.0f ? spriteRnd.flipX = true : spriteRnd.flipX = false;

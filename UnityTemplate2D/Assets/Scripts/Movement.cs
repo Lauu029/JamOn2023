@@ -11,14 +11,14 @@ public class Movement : MonoBehaviour
     [SerializeField]
     float jumpVelocity;
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     private PlayerController playerActions;
 
     bool jump = false;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
         playerActions = new PlayerController();
     }
 
@@ -31,11 +31,11 @@ public class Movement : MonoBehaviour
         rb.velocity = inputDirection;
 
         //Jump
-        //if (jump)
-        //{
-        //    rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
-        //    jump = false;
-        //}
+        if (jump)
+        {
+           rb.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+           jump = false;
+        }
 
     }
 

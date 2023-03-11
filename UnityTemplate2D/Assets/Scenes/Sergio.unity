@@ -369,7 +369,7 @@ MonoBehaviour:
   _sampleSize: 1024
   _microphoneName: 
   screamingTime: 3
-  screamDb: 50
+  screamDb: -50
   landingPoint: {fileID: 1006385066}
   speedThrust: 1500
   verticalPower: 0.2
@@ -599,7 +599,6 @@ GameObject:
   - component: {fileID: 749567026}
   - component: {fileID: 749567025}
   - component: {fileID: 749567024}
-  - component: {fileID: 749567027}
   - component: {fileID: 749567028}
   m_Layer: 0
   m_Name: Main Camera
@@ -674,27 +673,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &749567027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749567023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37c7ff3e57365c943b1f86c8bd3f4061, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _maxDb: 0
-  _sampleSize: 1024
-  _microphoneName: 
-  screamingTime: 0
-  screamDb: 0
-  landingPoint: {fileID: 0}
-  speedThrust: 0
-  verticalPower: 0
-  leftTimeBar: {fileID: 0}
 --- !u!114 &749567028
 MonoBehaviour:
   m_ObjectHideFlags: 0

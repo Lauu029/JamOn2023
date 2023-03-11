@@ -70,7 +70,7 @@ public class MicLevelDetector : MonoBehaviour
             this.enabled = false;
         }
 
-        Debug.Log((1.0f - timeScreaming / screamingTime));
+        Debug.Log(1.0f - (float)(timeScreaming / screamingTime));
         leftTimeBar.value = (1.0f - timeScreaming / screamingTime);
     }
 

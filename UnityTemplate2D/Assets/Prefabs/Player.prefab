@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2955017980630334648}
   - component: {fileID: 312074814460447651}
-  - component: {fileID: 5823919837188728738}
+  - component: {fileID: 5360482513833390064}
   m_Layer: 0
   m_Name: pies_izq
   m_TagString: Untagged
@@ -59,7 +59,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.19634578}
   m_EdgeRadius: 0
---- !u!114 &5823919837188728738
+--- !u!114 &5360482513833390064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 810639586469078110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495e8a0955e231549a5057e72171a46c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e4054861d3881e45b2cbef9c283748c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2066699350083986567
@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2446263059869899255}
   - component: {fileID: 3014512916001490791}
-  - component: {fileID: 4514596398766640259}
+  - component: {fileID: 5019738852621815557}
   m_Layer: 0
   m_Name: pies_der
   m_TagString: Untagged
@@ -130,7 +130,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.15575418}
   m_EdgeRadius: 0
---- !u!114 &4514596398766640259
+--- !u!114 &5019738852621815557
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2066699350083986567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 495e8a0955e231549a5057e72171a46c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e4054861d3881e45b2cbef9c283748c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2814323665434103646

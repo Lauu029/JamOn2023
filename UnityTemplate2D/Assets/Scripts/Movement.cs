@@ -18,17 +18,17 @@ public class Movement : MonoBehaviour
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        playerActions = new PlayerController();
+        //rb = GetComponent<Rigidbody>();
+        //playerActions = new PlayerController();
     }
 
     void FixedUpdate()
     {
         //Movement WASD
-        Vector2 moveVal = playerActions.Player.Move.ReadValue<Vector2>();
-        Vector3 inputDirection = new Vector3(moveVal.x, 0, moveVal.y).normalized * velocity;
+        //Vector2 moveVal = playerActions.Player.Move.ReadValue<Vector2>();
+        //Vector3 inputDirection = new Vector3(moveVal.x, 0, moveVal.y).normalized * velocity;
 
-        rb.velocity = inputDirection;
+        //rb.velocity = inputDirection;
 
         //Jump
         //if (jump)

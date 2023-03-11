@@ -4,13 +4,13 @@ public class MicLevelDetector : MonoBehaviour
 {
     [SerializeField] private float _maxDb = 0;
     [SerializeField] private int _sampleSize = 1024;
-    [SerializeField] private string _microphoneName = null;
+    [SerializeField] private string _microphoneName = "";
 
     private AudioClip _clip;
     private float[] _rawData;
 
     public float screamingTime; //Tiempo que tiene que estar gritando
-    public float screamDb;      //Decibelios que tiene que alcanzar
+    public float screamDb = 0f;      //Decibelios que tiene que alcanzar
     public Transform landingPoint;  //Donde aterriza
     public float speedThrust;
     public float verticalPower;
@@ -23,7 +23,7 @@ public class MicLevelDetector : MonoBehaviour
 
     private void Start()
     {
-        if (_microphoneName == null)
+        if (_microphoneName == "")
         {
             _microphoneName = Microphone.devices[0];
         }
@@ -40,7 +40,7 @@ public class MicLevelDetector : MonoBehaviour
             screaming = true;
         }
 
-        if (screaming && timeScreaming < screamingTime && Microphone.IsRecording(_microphoneName))
+        if (Microphone.IsRecording(_microphoneName))
         {
 
             _clip.GetData(_rawData, 0);
@@ -52,20 +52,24 @@ public class MicLevelDetector : MonoBehaviour
             }
             rms = Mathf.Sqrt(rms / _sampleSize);
             float db = 20 * Mathf.Log10(rms);
-            Debug.Log(db);
 
-            if (db >= screamDb)
+
+            if (screamDb < db)
             {
-                timeScreaming += Time.deltaTime;
+                if (screaming && timeScreaming < screamingTime)
+                    timeScreaming += Time.deltaTime;
+
+             
             }
 
 
 
         }
-        else if (timeScreaming >= screamingTime && screaming)
+        if (timeScreaming >= screamingTime && screaming)
         {
-            Debug.Log("Te disparo");
-            //GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
+            //Debug.Log("Te disparo");
+            GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
+            this.enabled = false;
         }
     }
 

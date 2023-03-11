@@ -12,9 +12,11 @@ public class Salto : MonoBehaviour
     Rigidbody2D rb;
     private PlayerController playerActions;
     bool onLand = true;
+    bool onLandSide = true;
     //Vector que indica cuanta fuerza lleva
     Vector2 currentForce = new Vector2(0, 0);
     public bool OnLand { get { return onLand; } }
+    public bool OnLandSide { get { return onLandSide; } }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,10 +41,11 @@ public class Salto : MonoBehaviour
         Vector2 jumpVec = new Vector2(0, velocity);     //Fuerza en vertical
 
         //SI hemos pulsado el boton, y estamos en el suelo
-        if (jumping && onLand)
+        if (jumping && (onLand || onLandSide))
         {
             rb.AddForce(jumpVec);
             onLand = false;
+            onLandSide = false;
             currentForce = new Vector2(0, hold_Aceleration);
         }
 
@@ -62,6 +65,11 @@ public class Salto : MonoBehaviour
     {
         onLand = true;
         GetComponent<Movimiento>().enabled = true;
+    }
+
+    public void landSide()
+    {
+        onLandSide = true;
     }
 
     private void OnEnable()

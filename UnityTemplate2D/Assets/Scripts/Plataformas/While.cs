@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class While : MonoBehaviour
 {
-    [SerializeField]
     float timeWaiting = -1;
 
     [SerializeField]
@@ -19,7 +18,6 @@ public class While : MonoBehaviour
     [SerializeField]
     float speedThrust;
 
-    [SerializeField]
     Rigidbody2D rb;
     void ButtonCheck()
     {

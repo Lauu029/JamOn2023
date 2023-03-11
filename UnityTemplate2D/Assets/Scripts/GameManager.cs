@@ -5,10 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
+    int actualLevel = 1;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -20,5 +31,18 @@ public class GameManager : MonoBehaviour
     public void changeScene(string sc)
     {
         SceneManager.LoadScene(sc);
+    }
+
+    public void goToLevel(int level)
+    {
+        SceneManager.LoadScene("Level" + level);    
+    }
+
+    public void loadNextLevel()
+    {
+        int next = actualLevel + 1;
+
+        actualLevel = next;
+        goToLevel(next);
     }
 }

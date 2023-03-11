@@ -5,11 +5,17 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Oscar.unity
-    guid: 4e8eea2643835f249a6618d57e8d86da
+    path: Assets/Scenes/JuegoFinal/MenuPrincipal.unity
+    guid: 228d926794e4e2d46bc238e37db3466b
+  - enabled: 1
+    path: Assets/Scenes/JuegoFinal/MenuSeleccion.unity
+    guid: a5596498133e7864caaeedf86333a27c
+  - enabled: 1
+    path: Assets/Scenes/JuegoFinal/EscenaIntermedia.unity
+    guid: f7279046a4239cb4ab9cbd398c0dc8d7
+  - enabled: 1
+    path: Assets/Scenes/JuegoFinal/Level1.unity
+    guid: 5dfa4de5b8bc8094eab38c8536189bc2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: fd79ed2fe7b68124a8739be15a957d19, type: 2}

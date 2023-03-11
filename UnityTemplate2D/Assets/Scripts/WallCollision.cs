@@ -15,7 +15,7 @@ public class WallCollision : MonoBehaviour
 
     [SerializeField]
     float stopTime = 1.0f, slideTime = 1.0f;
-    float stopTimer = 0.0f, slideTimer = 0.0f;
+    float stopTimer = -1.0f, slideTimer = -1.0f;
     float gravityScale;
 
     private void Awake()
@@ -55,17 +55,17 @@ public class WallCollision : MonoBehaviour
         rb.velocity = Vector2.zero;
         stopTimer = stopTime;
 
-        if (!salto.OnLand){
-            movimiento.enabled = false;
-            salto.landSide();
-        }
-
+        salto.landSide();
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         rb.gravityScale = gravityScale;
 
+        stopTimer = -1.0f;
+        slideTimer = -1.0f;
+
         movimiento.enabled = true;
     }
+
 }

@@ -5,14 +5,15 @@ using UnityEngine;
 public class Salto : MonoBehaviour
 {
 
-    public float velocity;
+    public float verticalVelocity;
+    public float horizontalVelocity;
     public float hold_Aceleration; //Velocidad que se le a�ade si sigues pulsando el boton
     public float hold_Deceleration; // Cantidad de aceleracion que pierde a medida que sube
     bool jumping;
     Rigidbody2D rb;
     private PlayerController playerActions;
     bool onLand = true;
-    bool onLandSide = true;
+    bool onLandSide = false;
     //Vector que indica cuanta fuerza lleva
     Vector2 currentForce = new Vector2(0, 0);
     public bool OnLand { get { return onLand; } }
@@ -38,18 +39,30 @@ public class Salto : MonoBehaviour
     private void FixedUpdate()
     {
 
-        Vector2 jumpVec = new Vector2(0, velocity);     //Fuerza en vertical
+        Vector2 jumpVec = new Vector2(0, verticalVelocity);     //Fuerza en vertical
+        Vector2 jumpVecSide = new Vector2(horizontalVelocity, 0); //Fuerza en horizontal
 
-        //SI hemos pulsado el boton, y estamos en el suelo
+        //SI hemos pulsado el boton, y estamos en el suelo o en la pared
         if (jumping && (onLand || onLandSide))
         {
-            rb.AddForce(jumpVec);
-            onLand = false;
-            onLandSide = false;
+            rb.AddForce(jumpVec); //añadir fuerza vertical
             currentForce = new Vector2(0, hold_Aceleration);
+
+            //Si estamos en la pared, añadimos fuerza horizontal
+            if (OnLandSide)
+            {
+                if (transform.position.x > 0)
+                    rb.AddForce(-jumpVecSide);
+                else
+                    rb.AddForce(jumpVecSide);
+
+                onLandSide = false;
+            }
+
+            onLand = false;
         }
 
-        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Keypad0))
+        if (!onLandSide && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Keypad0)))
         {
             rb.AddForce(currentForce);
 
@@ -64,12 +77,18 @@ public class Salto : MonoBehaviour
     public void land()
     {
         onLand = true;
+        onLandSide = false;
         GetComponent<Movimiento>().enabled = true;
     }
 
     public void landSide()
     {
-        onLandSide = true;
+        if (!onLand)
+        {
+            onLandSide = true;
+            GetComponent<Movimiento>().enabled = false;
+        }
+
     }
 
     private void OnEnable()

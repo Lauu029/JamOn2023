@@ -14,6 +14,8 @@ public class Pies : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        s.land();
+        if(collision.GetComponent<Pies>() == null)
+            s.land();
+
     }
 }

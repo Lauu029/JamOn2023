@@ -389,13 +389,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 810639586469078110, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066699350083986567, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5220874602083097694, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: velocity
-      value: 500
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5220874602083097694, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220874602083097694, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: hold_Aceleration
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5220874602083097694, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: hold_Deceleration
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8911347012105169674, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169682, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_Name
@@ -403,7 +423,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169685, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169687, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_RootOrder

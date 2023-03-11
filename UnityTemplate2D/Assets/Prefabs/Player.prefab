@@ -318,7 +318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6a39d0734fac246aa0ab8a76ae2cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocity: 1000
+  verticalVelocity: 1000
+  horizontalVelocity: 800
   hold_Aceleration: 100
   hold_Deceleration: 10
 --- !u!95 &8435877068045110163

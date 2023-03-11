@@ -110,6 +110,12 @@ public class If_Platform : MonoBehaviour
         if (answer == buenarda)
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
         else
-            GameManager.instance.reloadScene();
+        {
+            rb.gameObject.GetComponent<Movimiento>().enabled = false;
+            rb.gameObject.GetComponent<Salto>().enabled = false;
+            GameManager.instance.showWrongAnswer();
+            canvas.SetActive(false);
+            interactable = false;
+        }
     }
 }

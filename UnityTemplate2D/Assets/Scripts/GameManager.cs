@@ -8,6 +8,13 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     int actualLevel = 1;
+
+    float deadTime = -1;
+
+    [SerializeField]
+    float timeToReload = 2;
+
+    Transform deathCanvas;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,10 +29,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        deathCanvas = transform.GetChild(0);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if(deadTime > -1)
+        {
+            deadTime += Time.deltaTime;
+            if (deadTime >= timeToReload)
+                reloadScene();
+        }
     }
 
     public void changeScene(string sc)
@@ -46,8 +63,17 @@ public class GameManager : MonoBehaviour
         goToLevel(next);
     }
 
+    public void showWrongAnswer()
+    {
+        deathCanvas.GetChild(0).gameObject.SetActive(true);
+        deadTime = 0;
+    }
+
     public void reloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        for (int i = 0; i < deathCanvas.childCount; ++i)
+            deathCanvas.GetChild(i).gameObject.SetActive(false);
+        deadTime = -1;
     }
 }

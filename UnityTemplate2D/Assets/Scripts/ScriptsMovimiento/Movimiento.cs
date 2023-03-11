@@ -7,6 +7,8 @@ public class Movimiento : MonoBehaviour
 {
     private Rigidbody2D rb;
     private PlayerController playerController;
+    private Animator playerAnim;
+    private SpriteRenderer spriteRnd;
 
     private float velocity;
 
@@ -26,6 +28,9 @@ public class Movimiento : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerController = new PlayerController();    
+
+        playerAnim = GetComponent<Animator>();
+        spriteRnd = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -41,13 +46,23 @@ public class Movimiento : MonoBehaviour
             input.y = y;
             rb.velocity = input;
         }
-        else if(rb.velocity.x != 0)
+        else if(rb.velocity.x > 0.01f || rb.velocity.x < -0.01f)
         {
             float sign = rb.velocity.x / Mathf.Abs(rb.velocity.x);
             float newVel = Mathf.Max(Mathf.Abs(rb.velocity.x) - deceleration * Time.deltaTime, 0);
             rb.velocity = new Vector2(newVel * sign, rb.velocity.y);
-            velocity = /*Mathf.Max(velocity - velocityFactor * Time.deltaTime,*/ initialVelocity;
+            velocity = initialVelocity;
         }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        playerAnim.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
+        if (rb.velocity.x < 0.0f)
+            spriteRnd.flipX = true;
+        else
+            spriteRnd.flipX = false;
     }
 
     private void OnEnable()

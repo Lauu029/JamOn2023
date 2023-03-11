@@ -5,6 +5,7 @@ using UnityEngine;
 public class If_Platform : MonoBehaviour
 {
     public float speedThrust; //Velocidad que se le añade si acierta
+    public float verticalPower; //Fuerza adicional en vertical par mandarlo mas para arriba que de lado
 
     bool interactable = false;
 
@@ -20,6 +21,7 @@ public class If_Platform : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public Transform landingPoint; //Punto al que envias al jugador
     struct respuestas
     {
         public string buena;
@@ -64,11 +66,20 @@ public class If_Platform : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Q) && buenarda == 0)
         {
-            rb.AddForce(new Vector2(0, speedThrust));
+            Vector2 dir = new Vector2(landingPoint.position.x, landingPoint.position.y) - new Vector2(transform.position.x, transform.position.y);
+            dir.Normalize();
+
+            dir.y += verticalPower;   //Me lo estoy inventando literalmente todo
+
+            rb.AddForce(dir * speedThrust);
         }
         else if(Input.GetKeyDown(KeyCode.E) && buenarda == 1)
         {
-            rb.AddForce(new Vector2(0, speedThrust));
+            Vector2 dir = new Vector2(landingPoint.position.x, landingPoint.position.y) - new Vector2(transform.position.x, transform.position.y);
+            dir.Normalize();
+
+            dir.y += verticalPower;
+            rb.AddForce(dir * speedThrust);
         }
     }
 
@@ -88,8 +99,8 @@ public class If_Platform : MonoBehaviour
         }
         else
         {
-            Debug.Log(resp[question].buena);
             Debug.Log(resp[question].mala);
+            Debug.Log(resp[question].buena);
         }
     }
 }

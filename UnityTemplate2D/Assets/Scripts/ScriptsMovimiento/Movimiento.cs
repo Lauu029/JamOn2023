@@ -46,7 +46,6 @@ public class Movimiento : MonoBehaviour
             float sign = rb.velocity.x / Mathf.Abs(rb.velocity.x);
             float newVel = Mathf.Max(Mathf.Abs(rb.velocity.x) - deceleration * Time.deltaTime, 0);
             rb.velocity = new Vector2(newVel * sign, rb.velocity.y);
-            Debug.Log(rb.velocity);
             velocity = /*Mathf.Max(velocity - velocityFactor * Time.deltaTime,*/ initialVelocity;
         }
     }

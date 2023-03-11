@@ -393,13 +393,17 @@ PrefabInstance:
       propertyPath: velocity
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 5220874602083097694, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169682, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169685, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169687, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_RootOrder

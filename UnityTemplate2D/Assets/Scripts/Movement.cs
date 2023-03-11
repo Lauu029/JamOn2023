@@ -11,31 +11,31 @@ public class Movement : MonoBehaviour
     [SerializeField]
     float jumpVelocity;
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
     private PlayerController playerActions;
 
     bool jump = false;
 
     void Awake()
     {
-        //rb = GetComponent<Rigidbody>();
-        //playerActions = new PlayerController();
+        rb = GetComponent<Rigidbody2D>();
+        playerActions = new PlayerController();
     }
 
     void FixedUpdate()
     {
         //Movement WASD
-        //Vector2 moveVal = playerActions.Player.Move.ReadValue<Vector2>();
-        //Vector3 inputDirection = new Vector3(moveVal.x, 0, moveVal.y).normalized * velocity;
+        Vector2 moveVal = playerActions.Player.Move.ReadValue<Vector2>();
+        Vector3 inputDirection = new Vector3(moveVal.x, 0, moveVal.y).normalized * velocity;
 
-        //rb.velocity = inputDirection;
+        rb.velocity = inputDirection;
 
         //Jump
-        //if (jump)
-        //{
-        //    rb.AddForce(Vector2.up * jumpVelocity, ForceMode.Impulse);
-        //    jump = false;
-        //}
+        if (jump)
+        {
+           rb.AddForce(Vector2.up * jumpVelocity, ForceMode2D.Impulse);
+           jump = false;
+        }
 
     }
 

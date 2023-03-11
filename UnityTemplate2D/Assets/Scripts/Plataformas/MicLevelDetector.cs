@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class MicLevelDetector : MonoBehaviour
 {
     [SerializeField] private float _maxDb = 0;
@@ -20,6 +20,8 @@ public class MicLevelDetector : MonoBehaviour
     bool interactable = false;
     bool screaming = false;
     Rigidbody2D rb;
+
+    public Slider leftTimeBar;
 
     private void Start()
     {
@@ -57,19 +59,19 @@ public class MicLevelDetector : MonoBehaviour
             if (screamDb < db)
             {
                 if (screaming && timeScreaming < screamingTime)
+                {
                     timeScreaming += Time.deltaTime;
-
-             
+                }
             }
-
-
-
         }
         if (timeScreaming >= screamingTime && screaming)
         {
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
             this.enabled = false;
         }
+
+        Debug.Log(1.0f - (float)(timeScreaming / screamingTime));
+        leftTimeBar.value = (1.0f - timeScreaming / screamingTime);
     }
 
     public float GetMaxDb()

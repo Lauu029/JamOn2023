@@ -67,7 +67,6 @@ public class MicLevelDetector : MonoBehaviour
         }
         if (timeScreaming >= screamingTime && screaming)
         {
-            //Debug.Log("Te disparo");
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
             this.enabled = false;
         }

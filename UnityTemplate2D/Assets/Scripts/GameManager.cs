@@ -45,4 +45,9 @@ public class GameManager : MonoBehaviour
         actualLevel = next;
         goToLevel(next);
     }
+
+    public void reloadScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

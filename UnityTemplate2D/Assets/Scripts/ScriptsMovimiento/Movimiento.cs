@@ -34,9 +34,11 @@ public class Movimiento : MonoBehaviour
         Vector2 moveVal = playerController.Player.Move.ReadValue<Vector2>();
         if (moveVal.x != 0)
         {
+            float y = rb.velocity.y;
             velocity = Mathf.Min(velocity + velocityFactor * Time.deltaTime, maxVelocity);
-            Vector2 input = new Vector2(moveVal.x, rb.velocity.y).normalized * velocity;
+            Vector2 input = new Vector2(moveVal.x, 0).normalized * velocity;
 
+            input.y = y;
             rb.velocity = input;
         }
         else if(rb.velocity.x != 0)

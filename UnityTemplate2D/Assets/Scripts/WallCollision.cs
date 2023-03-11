@@ -25,12 +25,11 @@ public class WallCollision : MonoBehaviour
     {
         if (stopTimer > 0.0f) //parado en la pared
         {
-            Debug.Log("stop");
             stopTimer -= Time.deltaTime;
 
             if (stopTimer <= 0.0f)
             {
-                rb.gravityScale = gravityScale / 2.0f;
+                rb.gravityScale = gravityScale / 5.0f;
                 slideTimer = slideTime;
             }
 
@@ -38,7 +37,6 @@ public class WallCollision : MonoBehaviour
 
         if (slideTimer > 0.0f) //haciendo slide en la pared
         {
-            Debug.Log("slide");
             slideTimer -= Time.deltaTime;
 
             if (slideTimer <= 0.0f)
@@ -48,14 +46,13 @@ public class WallCollision : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("collision");
         rb.gravityScale = 0.0f;
+        rb.velocity = Vector2.zero;
         stopTimer = stopTime;
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log("exit");
         rb.gravityScale = gravityScale;
     }
 }

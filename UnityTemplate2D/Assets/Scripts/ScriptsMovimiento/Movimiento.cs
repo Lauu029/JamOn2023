@@ -7,6 +7,8 @@ public class Movimiento : MonoBehaviour
 {
     private Rigidbody2D rb;
     private PlayerController playerController;
+    private Animator playerAnim;
+    private SpriteRenderer spriteRnd;
 
     private float velocity;
 
@@ -26,12 +28,16 @@ public class Movimiento : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerController = new PlayerController();    
+
+        playerAnim = transform.GetChild(0).GetComponent<Animator>();
+        spriteRnd = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         Vector2 moveVal = playerController.Player.Move.ReadValue<Vector2>();
+        bool decel = true;
         if (moveVal.x != 0)
         {
             float y = rb.velocity.y;
@@ -40,14 +46,28 @@ public class Movimiento : MonoBehaviour
 
             input.y = y;
             rb.velocity = input;
+            decel = false;
         }
-        else if(rb.velocity.x != 0)
+        else if(rb.velocity.x > 0.01f || rb.velocity.x < -0.01f)
         {
             float sign = rb.velocity.x / Mathf.Abs(rb.velocity.x);
             float newVel = Mathf.Max(Mathf.Abs(rb.velocity.x) - deceleration * Time.deltaTime, 0);
             rb.velocity = new Vector2(newVel * sign, rb.velocity.y);
-            velocity = /*Mathf.Max(velocity - velocityFactor * Time.deltaTime,*/ initialVelocity;
+            velocity = initialVelocity;
         }
+        else
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+
+        playerAnim.SetFloat("Velocity", Mathf.Abs(rb.velocity.x));
+        if (rb.velocity.x != 0.0f)
+            playerAnim.speed = Mathf.Abs(rb.velocity.x) / maxVelocity;
+        else
+            playerAnim.speed = 1;
+
+        if(!decel)
+            _ = rb.velocity.x < 0.0f ? spriteRnd.flipX = true : spriteRnd.flipX = false;
     }
 
     private void OnEnable()

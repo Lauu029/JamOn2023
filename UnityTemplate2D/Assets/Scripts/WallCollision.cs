@@ -49,10 +49,16 @@ public class WallCollision : MonoBehaviour
         rb.gravityScale = 0.0f;
         rb.velocity = Vector2.zero;
         stopTimer = stopTime;
+
+        if (!player.GetComponent<Salto>().OnLand)
+            player.GetComponent<Movimiento>().enabled = false;
+
     }
 
     void OnCollisionExit2D(Collision2D collision)
     {
         rb.gravityScale = gravityScale;
+
+        player.GetComponent<Movimiento>().enabled = true;
     }
 }

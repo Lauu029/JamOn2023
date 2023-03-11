@@ -6,7 +6,7 @@ public class Salto : MonoBehaviour
 {
 
     public float velocity;
-    public float hold_Aceleration; //Velocidad que se le añade si sigues pulsando el boton
+    public float hold_Aceleration; //Velocidad que se le aï¿½ade si sigues pulsando el boton
     public float hold_Deceleration; // Cantidad de aceleracion que pierde a medida que sube
     bool jumping;
     Rigidbody2D rb;
@@ -14,6 +14,7 @@ public class Salto : MonoBehaviour
     bool onLand = true;
     //Vector que indica cuanta fuerza lleva
     Vector2 currentForce = new Vector2(0, 0);
+    public bool OnLand { get { return onLand; } }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -45,12 +46,12 @@ public class Salto : MonoBehaviour
             currentForce = new Vector2(0, hold_Aceleration);
         }
 
-        if(Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Keypad0))
+        if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Keypad0))
         {
             rb.AddForce(currentForce);
 
             //Hasta que ya no le quede fuerza
-            if (currentForce.y > 0)currentForce = currentForce - new Vector2(0, hold_Deceleration); 
+            if (currentForce.y > 0) currentForce = currentForce - new Vector2(0, hold_Deceleration);
         }
 
         jumping = false;
@@ -60,6 +61,7 @@ public class Salto : MonoBehaviour
     public void land()
     {
         onLand = true;
+        GetComponent<Movimiento>().enabled = true;
     }
 
     private void OnEnable()

@@ -34,36 +34,38 @@ public class MicLevelDetector : MonoBehaviour
 
     private void Update()
     {
-        if (Microphone.IsRecording(_microphoneName))
+
+        if (interactable && Input.GetKeyDown(KeyCode.S))
+        {
+            screaming = true;
+        }
+
+        if (screaming && timeScreaming < screamingTime && Microphone.IsRecording(_microphoneName))
         {
 
-            if (interactable && Input.GetKeyDown(KeyCode.S)){
-                screaming = true;
-            }
+            _clip.GetData(_rawData, 0);
+            float rms = 0;
 
-            if (screaming && timeScreaming < screamingTime)
+            for (int i = 0; i < _sampleSize; i++)
             {
-                _clip.GetData(_rawData, 0);
-                float rms = 0;
-                 
-                for (int i = 0; i < _sampleSize; i++)
-                {
-                    rms += _rawData[i] * _rawData[i];
-                }
-                rms = Mathf.Sqrt(rms / _sampleSize);
-                float db = 20 * Mathf.Log10(rms);
-
-                if(db >= screamDb)
-                {
-                    timeScreaming += Time.deltaTime;
-                }
+                rms += _rawData[i] * _rawData[i];
             }
-            //else if(timeScreaming >= screamingTime && screaming)
-            //{
-            //    Debug.Log("Te disparo");
-            //    //GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
-            //}
+            rms = Mathf.Sqrt(rms / _sampleSize);
+            float db = 20 * Mathf.Log10(rms);
+            Debug.Log(db);
 
+            if (db >= screamDb)
+            {
+                timeScreaming += Time.deltaTime;
+            }
+
+
+
+        }
+        else if (timeScreaming >= screamingTime && screaming)
+        {
+            Debug.Log("Te disparo");
+            //GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
         }
     }
 

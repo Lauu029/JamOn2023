@@ -256,7 +256,7 @@ MonoBehaviour:
   _sampleSize: 1024
   _microphoneName: 
   screamingTime: 3
-  screamDb: -20
+  screamDb: -50
   landingPoint: {fileID: 1006385066}
   speedThrust: 1500
   verticalPower: 0.2

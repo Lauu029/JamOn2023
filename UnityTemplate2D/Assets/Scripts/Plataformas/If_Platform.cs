@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class If_Platform : MonoBehaviour
@@ -20,7 +21,7 @@ public class If_Platform : MonoBehaviour
     int buenarda = -1;
 
     Rigidbody2D rb;
-
+    GameObject canvas;
     public Transform landingPoint; //Punto al que envias al jugador
     struct respuestas
     {
@@ -37,6 +38,7 @@ public class If_Platform : MonoBehaviour
             resp[i].mala = malas[i];
         }
 
+        canvas = transform.GetChild(0).gameObject;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -54,6 +56,7 @@ public class If_Platform : MonoBehaviour
         if (collision.gameObject.GetComponent<Salto>() != null)
         {
             interactable = false;
+            canvas.SetActive(false);
         }
     }
 
@@ -64,20 +67,21 @@ public class If_Platform : MonoBehaviour
             showQuestion();
         }
 
-        if(Input.GetKeyDown(KeyCode.Q) && buenarda == 0)
+        /*if(Input.GetKeyDown(KeyCode.Q) && buenarda == 0)
         {
             GetComponent<Canon>().shoot(landingPoint, rb,speedThrust, verticalPower);
         }
         else if(Input.GetKeyDown(KeyCode.E) && buenarda == 1)
         {
             GetComponent<Canon>().shoot(landingPoint, rb,speedThrust, verticalPower);
-        }
+        }*/
     }
 
     private void showQuestion()
     {
         Debug.Log(resp.Length);
         int question = Random.Range(0, preguntas.Length);
+        canvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = preguntas[question];
         Debug.Log(preguntas[question]);
 
         int buena = Random.Range(0, 2);
@@ -86,12 +90,32 @@ public class If_Platform : MonoBehaviour
         if (buena == 0)
         {
             Debug.Log(resp[question].buena);
+            canvas.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].buena;
             Debug.Log(resp[question].mala);
+            canvas.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].mala;
         }
         else
         {
             Debug.Log(resp[question].mala);
+            canvas.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].mala;
             Debug.Log(resp[question].buena);
+            canvas.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].buena;
+        }
+
+        canvas.SetActive(true);
+    }
+
+    public void checkAnswer(int answer)
+    {
+        if (answer == buenarda)
+            GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
+        else
+        {
+            rb.gameObject.GetComponent<Movimiento>().enabled = false;
+            rb.gameObject.GetComponent<Salto>().enabled = false;
+            GameManager.instance.showWrongAnswer();
+            canvas.SetActive(false);
+            interactable = false;
         }
     }
 }

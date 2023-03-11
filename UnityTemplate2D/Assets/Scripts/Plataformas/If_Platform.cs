@@ -10,12 +10,12 @@ public class If_Platform : MonoBehaviour
     bool interactable = false;
 
     string[] preguntas = { "¿Es Guille bajito?", "¿A que le huelen los sobacos a Carlos Leon?", "Los dedos de la mano, los dedos de los pies, lo cojones y la polla todos suman...",
-        "¿El pimiento es una fruta?", "¿A que huelen los pingüinos", "¿Te comerias un culo por 50 millones de euros" };
+        "¿El pimiento es una fruta?", "¿A que huelen los pingüinos", "¿Te comerias un culo por 50 millones de euros", "¿Cual es la mejor asociación del mundo?" };
     respuestas[] resp = new respuestas[50];
 
 
-    string[] buenas = { "Si", "A paro", "23", "Si", "Calla friki", "Depende del culo" };
-    string[] malas = { "No", "A trabajo", "Ese tipo de humor no tiene cabida en esta jam", "No", "A pescado", "Si" };
+    string[] buenas = { "Si", "A paro", "23", "Si", "Calla friki", "Depende del culo", "Diskobolo" };
+    string[] malas = { "No", "A trabajo", "Ese tipo de humor no tiene cabida en esta jam", "No", "A pescado", "Si", "La ETA" };
 
     int buenarda = -1;
 

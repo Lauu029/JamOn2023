@@ -446,8 +446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: 2
-  maxVelocity: 4
-  velocityFactor: 5
+  maxVelocity: 5
+  velocityFactor: 4
   deceleration: 4
 --- !u!114 &5220874602083097694
 MonoBehaviour:

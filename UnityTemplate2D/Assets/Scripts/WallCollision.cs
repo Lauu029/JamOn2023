@@ -8,6 +8,9 @@ public class WallCollision : MonoBehaviour
     [SerializeField]
     GameObject player;
     Rigidbody2D rb;
+    Salto salto;
+    Movimiento movimiento;
+
 
 
     [SerializeField]
@@ -18,6 +21,8 @@ public class WallCollision : MonoBehaviour
     private void Awake()
     {
         rb = player.GetComponent<Rigidbody2D>();
+        salto = player.GetComponent<Salto>();
+        movimiento = player.GetComponent<Movimiento>();
         gravityScale = rb.gravityScale;
     }
 
@@ -50,8 +55,10 @@ public class WallCollision : MonoBehaviour
         rb.velocity = Vector2.zero;
         stopTimer = stopTime;
 
-        if (!player.GetComponent<Salto>().OnLand)
-            player.GetComponent<Movimiento>().enabled = false;
+        if (!salto.OnLand){
+            movimiento.enabled = false;
+            salto.landSide();
+        }
 
     }
 
@@ -59,6 +66,6 @@ public class WallCollision : MonoBehaviour
     {
         rb.gravityScale = gravityScale;
 
-        player.GetComponent<Movimiento>().enabled = true;
+        movimiento.enabled = true;
     }
 }

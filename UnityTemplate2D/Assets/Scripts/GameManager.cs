@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private FMODUnity.StudioEventEmitter _musicEvent;
+
     public static GameManager instance;
 
     bool paused = false;
@@ -33,6 +35,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        _musicEvent = transform.GetComponent<FMODUnity.StudioEventEmitter>();
+        _musicEvent.Play();
+
         deathCanvas = transform.GetChild(0);
     }
 
@@ -54,7 +59,8 @@ public class GameManager : MonoBehaviour
 
     public void goToLevel(int level)
     {
-        SceneManager.LoadScene("Level" + level);    
+        SceneManager.LoadScene("Level" + level);
+        //_musicEvent.SetParameter("Level", level);
     }
 
     public void loadNextLevel()

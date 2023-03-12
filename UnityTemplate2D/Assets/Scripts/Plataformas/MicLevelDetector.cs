@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class MicLevelDetector : MonoBehaviour
 {
     [SerializeField] private float _maxDb = 0;
@@ -21,7 +23,12 @@ public class MicLevelDetector : MonoBehaviour
     bool screaming = false;
     Rigidbody2D rb;
 
-    public Slider leftTimeBar;
+    [SerializeField] private Slider leftTimeBar;
+    [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject text;
+
+    string[] phrases = { "Grita 'Cleon pirata somalí' hasta que se acabe el tiempo",
+                         "Grita 'Guille ...' hasta que se acabe el tiempo"};
 
     private void Start()
     {
@@ -40,6 +47,8 @@ public class MicLevelDetector : MonoBehaviour
         if (interactable && Input.GetKeyDown(KeyCode.S))
         {
             screaming = true;
+            text.GetComponent<TextMeshProUGUI>().text = phrases[Random.Range(0, phrases.Length)];
+            canvas.SetActive(true);
         }
 
         if (Microphone.IsRecording(_microphoneName))
@@ -61,17 +70,17 @@ public class MicLevelDetector : MonoBehaviour
                 if (screaming && timeScreaming < screamingTime)
                 {
                     timeScreaming += Time.deltaTime;
+                    leftTimeBar.value = (1.0f - timeScreaming / screamingTime);
                 }
             }
         }
         if (timeScreaming >= screamingTime && screaming)
         {
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
+            canvas.SetActive(false);
             this.enabled = false;
         }
 
-        Debug.Log(1.0f - (float)(timeScreaming / screamingTime));
-        leftTimeBar.value = (1.0f - timeScreaming / screamingTime);
     }
 
     public float GetMaxDb()

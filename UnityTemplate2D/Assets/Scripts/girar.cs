@@ -16,7 +16,7 @@ public class girar : MonoBehaviour
     {
         spinning = true;
 
-        totalRot = Random.Range(2000.0f, 3000.0f);
+        totalRot = Random.Range(2000.0f, 2500.0f);
 
         GameManager.instance.useCoin();
 
@@ -30,8 +30,7 @@ public class girar : MonoBehaviour
             GetComponent<RectTransform>().Rotate(new Vector3(0, 0, -spinRation));
             accumulatedRot += spinRation;
             spinRation -= 0.005f;
-            if (spinRation < 0.2f) spinRation = 0.2f; 
-        
+            if (spinRation < 0.2f) spinRation = 0.2f;
         }
         else if (accumulatedRot >= totalRot)
         {

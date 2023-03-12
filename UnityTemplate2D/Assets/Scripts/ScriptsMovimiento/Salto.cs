@@ -84,7 +84,16 @@ public class Salto : MonoBehaviour
         onLand = true;
         onLandSide = false;
         GetComponent<Movimiento>().enabled = true;
+        transform.GetChild(0).GetComponent<Animator>().SetBool("Wall", false);
         transform.GetChild(0).GetComponent<Animator>().SetTrigger("Land");
+    }
+
+    public void fall()
+    {
+        onLand = false;
+        onLandSide = false;
+        //GetComponent<Movimiento>().enabled = true;
+        //transform.GetChild(0).GetComponent<Animator>().SetTrigger("Land");
     }
 
     public void landSide()

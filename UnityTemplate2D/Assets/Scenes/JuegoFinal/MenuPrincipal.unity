@@ -323,7 +323,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<color=#569cd6>float</color><color=#9cdcfe> Programacion </color><color=#dadada>[<color=#b5cea8>4</color>]
     = {</color><color=#b4b4b4> \n|\n|\n|\n| </color>\n<color=#dadada>};</color>\n<color=#569cd6>double</color><color=#9cdcfe>
-    Arte</color><color=#dadada> = </color><color=#b5cea8>Laura G\xF3mez Bodego;</color>"
+    Arte</color><color=#dadada> = </color><color=#b5cea8>Laura G\xF3mez Bodego<color=#dadada>;</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f02d296b1cc41864db0c71774e6b0e7f, type: 2}
   m_sharedMaterial: {fileID: 7189037229577921051, guid: f02d296b1cc41864db0c71774e6b0e7f, type: 2}
@@ -3973,7 +3973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &8710902985102563762
 CanvasRenderer:
   m_ObjectHideFlags: 0

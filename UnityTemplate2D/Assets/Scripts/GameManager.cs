@@ -20,17 +20,18 @@ public class GameManager : MonoBehaviour
 
     Transform deathCanvas;
 
-    public Sprite[] skins;
     bool[] unlockedSkins = new bool[50];
+    public Sprite[] skins;
 
     Sprite currentSkin = null;
+    int skinIndex = -1;
 
     int gachaMonedas = 2;
 
     // Start is called before the first frame update
     void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(deadTime > -1)
+        if (deadTime > -1)
         {
             deadTime += Time.deltaTime;
             if (deadTime >= timeToReload)
@@ -104,25 +105,37 @@ public class GameManager : MonoBehaviour
 
     public void unlockSkins()
     {
-        int i = Random.Range(0,unlockedSkins.Length);
-        while (unlockedSkins[i]) i = Random.Range(0, unlockedSkins.Length);
+        if (gachaMonedas > 0)
+        {
+            int i = Random.Range(0, skins.Length);
+            while (unlockedSkins[i]) i = Random.Range(0, skins.Length);
 
-        unlockedSkins[i] = true;
+            unlockedSkins[i] = true;
 
-        Debug.Log(unlockedSkins[i]);
+            for(int j = 0; j < skins.Length; j++)
+            {
+                Debug.Log(unlockedSkins[j]);
+            }
+        }
     }
 
     public void selectSkin(int i)
     {
-        Debug.Log(unlockedSkins.Length);
+
+        for (int j = 0; j < skins.Length; j++)
+        {
+            Debug.Log(unlockedSkins[j]);
+        }
+
         if (unlockedSkins[i])
         {
-            currentSkin = skins[i];
+            Debug.Log("Cabeza");
+            skinIndex = i;
         }
     }
 
     public Sprite getSkin()
     {
-        return currentSkin;
+        return skins[skinIndex];
     }
 }

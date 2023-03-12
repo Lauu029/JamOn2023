@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 82934191}
   - component: {fileID: 82934190}
   - component: {fileID: 82934189}
+  - component: {fileID: 82934192}
   m_Layer: 5
   m_Name: guille
   m_TagString: Untagged
@@ -159,8 +160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190, y: -185}
-  m_SizeDelta: {x: 133.3563, y: 86.93}
+  m_AnchoredPosition: {x: -703, y: -185}
+  m_SizeDelta: {x: 210.6, y: 148.8}
   m_Pivot: {x: 0.5, y: 0.5000001}
 --- !u!114 &82934189
 MonoBehaviour:
@@ -206,9 +207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: selectSkin
+      - m_Target: {fileID: 82934192}
+        m_TargetAssemblyTypeName: gachaBoton, Assembly-CSharp
+        m_MethodName: select
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -256,6 +257,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82934187}
   m_CullTransparentMesh: 1
+--- !u!114 &82934192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82934187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a55651b1264515428c738746fb228b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &145393114
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +281,7 @@ GameObject:
   - component: {fileID: 145393118}
   - component: {fileID: 145393117}
   - component: {fileID: 145393116}
+  - component: {fileID: 145393119}
   m_Layer: 5
   m_Name: cleon
   m_TagString: Untagged
@@ -292,8 +306,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -279, y: -185}
-  m_SizeDelta: {x: 133.3563, y: 86.93}
+  m_AnchoredPosition: {x: -882, y: -185}
+  m_SizeDelta: {x: 210.6, y: 148.8}
   m_Pivot: {x: 0.5, y: 0.5000001}
 --- !u!114 &145393116
 MonoBehaviour:
@@ -339,9 +353,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: selectSkin
+      - m_Target: {fileID: 145393119}
+        m_TargetAssemblyTypeName: gachaBoton, Assembly-CSharp
+        m_MethodName: select
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -389,6 +403,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145393114}
   m_CullTransparentMesh: 1
+--- !u!114 &145393119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145393114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a55651b1264515428c738746fb228b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &166508054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -968,7 +994,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232, y: 214}
+  m_AnchoredPosition: {x: 695, y: 439}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145979338

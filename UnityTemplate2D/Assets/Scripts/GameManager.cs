@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     Sprite currentSkin = null;
     int skinIndex = -1;
 
-    int gachaMonedas = 36;
+    int gachaMonedas = 1;
 
     GameObject timoty;
     float timer = 0.0f;
@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void changeScene(string sc)
     {
+        timer = 0.0f;
         SceneManager.LoadScene(sc);
     }
 

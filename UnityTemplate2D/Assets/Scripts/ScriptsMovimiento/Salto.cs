@@ -106,7 +106,6 @@ public class Salto : MonoBehaviour
             GetComponent<Movimiento>().enabled = false;
             transform.GetChild(0).GetComponent<Animator>().SetBool("Wall", true);
         }
-
     }
 
     private void OnEnable()

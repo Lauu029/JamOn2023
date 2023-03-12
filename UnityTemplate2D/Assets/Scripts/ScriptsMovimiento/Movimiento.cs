@@ -24,6 +24,8 @@ public class Movimiento : MonoBehaviour
     [SerializeField]
     float deceleration;
 
+    private int lastRot = 1;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -68,10 +70,18 @@ public class Movimiento : MonoBehaviour
 
         if (!decel)
         {
-            _ = rb.velocity.x < 0.0f ? spriteRnd.flipX = true : spriteRnd.flipX = false;
-            _ = rb.velocity.x < 0.0f ? spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true 
-                : spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
-            spriteRnd.transform.GetChild(0).transform.position *= rb.velocity.x < 0.0f ? -1 : 1;
+            //_ = rb.velocity.x < 0.0f ? spriteRnd.flipX = true : spriteRnd.flipX = false;
+            //_ = rb.velocity.x < 0.0f ? spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true 
+            //    : spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+            //spriteRnd.transform.GetChild(0).transform.position *= rb.velocity.x < 0.0f ? -1 : 1;
+            int nRot = rb.velocity.x < 0.0f ? -1 : 1;
+            if(lastRot != nRot)
+            {
+                lastRot = nRot;
+                Vector3 sc = spriteRnd.transform.localScale;
+                sc.x *= -1;
+                spriteRnd.transform.localScale = sc;
+            }
         }
     }
 

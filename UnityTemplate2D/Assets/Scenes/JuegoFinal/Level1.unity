@@ -2095,7 +2095,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6815598886328491882, guid: b1c6831a6d4c00f41ab31a89aeb944e9, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6815598886328491882, guid: b1c6831a6d4c00f41ab31a89aeb944e9, type: 3}
       propertyPath: ascendingVelocity

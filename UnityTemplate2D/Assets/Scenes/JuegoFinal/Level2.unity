@@ -660,7 +660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2807342128663994780, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
       propertyPath: ayuda.y
-      value: 3300
+      value: 3700
       objectReference: {fileID: 0}
     - target: {fileID: 2807342128663994781, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
       propertyPath: m_RootOrder

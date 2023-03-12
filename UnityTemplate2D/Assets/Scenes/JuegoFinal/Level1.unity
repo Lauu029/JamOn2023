@@ -1357,6 +1357,10 @@ PrefabInstance:
       propertyPath: timoty
       value: 
       objectReference: {fileID: 1028735775}
+    - target: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
+      propertyPath: _musicEvent
+      value: 
+      objectReference: {fileID: 790679777}
     - target: {fileID: 4730176276895624817, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
       propertyPath: m_RootOrder
       value: 13

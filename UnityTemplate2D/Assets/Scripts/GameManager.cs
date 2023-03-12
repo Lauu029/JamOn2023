@@ -7,8 +7,6 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private FMODUnity.StudioEventEmitter _musicEvent;
-
     public static GameManager instance;
 
     bool paused = false;
@@ -51,8 +49,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         deathCanvas = transform.GetChild(0);
-        _musicEvent = transform.GetComponent<FMODUnity.StudioEventEmitter>();
-        _musicEvent.Play();
+        GetComponent<FMODUnity.StudioEventEmitter>().Play();
 
     }
 
@@ -80,8 +77,9 @@ public class GameManager : MonoBehaviour
 
     public void goToLevel(int level)
     {
+        actualLevel = level;
         SceneManager.LoadScene("Level" + level);
-        //_musicEvent.SetParameter("Level", level);
+        instance.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Level", level);
     }
 
     public void loadNextLevel()

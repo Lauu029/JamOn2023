@@ -29,7 +29,7 @@ public class Movimiento : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerController = new PlayerController();    
+        playerController = new PlayerController();
 
         playerAnim = transform.GetChild(0).GetComponent<Animator>();
         spriteRnd = transform.GetChild(0).GetComponent<SpriteRenderer>();
@@ -50,7 +50,7 @@ public class Movimiento : MonoBehaviour
             rb.velocity = input;
             decel = false;
         }
-        else if(rb.velocity.x > 0.01f || rb.velocity.x < -0.01f)
+        else if (rb.velocity.x > 0.01f || rb.velocity.x < -0.01f)
         {
             float sign = rb.velocity.x / Mathf.Abs(rb.velocity.x);
             float newVel = Mathf.Max(Mathf.Abs(rb.velocity.x) - deceleration * Time.deltaTime, 0);
@@ -68,20 +68,13 @@ public class Movimiento : MonoBehaviour
         else
             playerAnim.speed = 1;
 
-        if (!decel)
+        int nRot = rb.velocity.x < 0.0f ? -1 : 1;
+        if (lastRot != nRot)
         {
-            //_ = rb.velocity.x < 0.0f ? spriteRnd.flipX = true : spriteRnd.flipX = false;
-            //_ = rb.velocity.x < 0.0f ? spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true 
-            //    : spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
-            //spriteRnd.transform.GetChild(0).transform.position *= rb.velocity.x < 0.0f ? -1 : 1;
-            int nRot = rb.velocity.x < 0.0f ? -1 : 1;
-            if(lastRot != nRot)
-            {
-                lastRot = nRot;
-                Vector3 sc = spriteRnd.transform.localScale;
-                sc.x *= -1;
-                spriteRnd.transform.localScale = sc;
-            }
+            lastRot = nRot;
+            Vector3 sc = spriteRnd.transform.localScale;
+            sc.x *= -1;
+            spriteRnd.transform.localScale = sc;
         }
     }
 

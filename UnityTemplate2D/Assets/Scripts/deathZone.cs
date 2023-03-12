@@ -10,7 +10,9 @@ public class deathZone : MonoBehaviour
     {
         if (collision.GetComponent<Salto>())
         {
-            GameManager.instance.reloadScene();
+            collision.gameObject.GetComponent<Movimiento>().enabled = false;
+            collision.gameObject.GetComponent<Salto>().enabled = false;
+            GameManager.instance.showDeath("timelimit");
         }
     }
 

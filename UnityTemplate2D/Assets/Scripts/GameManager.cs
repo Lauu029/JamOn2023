@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     Sprite currentSkin = null;
     int skinIndex = -1;
 
-    int gachaMonedas = 2;
+    int gachaMonedas = 36;
 
     GameObject timoty;
     float timer = 0.0f;
@@ -50,10 +50,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        deathCanvas = transform.GetChild(0);
         _musicEvent = transform.GetComponent<FMODUnity.StudioEventEmitter>();
         _musicEvent.Play();
 
-        deathCanvas = transform.GetChild(0);
     }
 
     // Update is called once per frame

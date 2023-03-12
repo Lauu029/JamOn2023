@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -91,9 +92,11 @@ public class GameManager : MonoBehaviour
         goToLevel(next);
     }
 
-    public void showWrongAnswer()
+    public void showDeath(string msg)
     {
         deathCanvas.GetChild(0).gameObject.SetActive(true);
+        deathCanvas.GetChild(1).gameObject.SetActive(true);
+        deathCanvas.GetChild(1).GetComponent<TextMeshProUGUI>().text = msg;
         deadTime = 0;
     }
 

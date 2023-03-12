@@ -66,8 +66,13 @@ public class Movimiento : MonoBehaviour
         else
             playerAnim.speed = 1;
 
-        if(!decel)
+        if (!decel)
+        {
             _ = rb.velocity.x < 0.0f ? spriteRnd.flipX = true : spriteRnd.flipX = false;
+            _ = rb.velocity.x < 0.0f ? spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = true 
+                : spriteRnd.transform.GetChild(0).GetComponent<SpriteRenderer>().flipX = false;
+            spriteRnd.transform.GetChild(0).transform.position *= rb.velocity.x < 0.0f ? -1 : 1;
+        }
     }
 
     private void OnEnable()

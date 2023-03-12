@@ -33,7 +33,9 @@ public class MicLevelDetector : MonoBehaviour
                          "<color=red>Gime</color> hasta que se acabe el tiempo",
                          "Grita '<color=red>Moskis</color>' hasta que se acabe el tiempo",
                          "<color=red>Gime</color> hasta que se acabe el tiempo",
-                         "Canta '<color=red>Un Villancico </color>' hasta que se acabe el tiempo"};
+                         "Canta '<color=red>Un Villancico </color>' hasta que se acabe el tiempo",
+                         "Canta '<color=red>Bad Bunny Baby </color>' hasta que se acabe el tiempo",
+                         "Canta '<color=red>Una canción de Disney </color>' hasta que se acabe el tiempo"};
 
     private void Start()
     {

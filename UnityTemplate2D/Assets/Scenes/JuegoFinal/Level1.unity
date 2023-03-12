@@ -822,9 +822,33 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3862690680692143008, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862690680692143008, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862690680692143008, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862690680692143008, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3862690680692143008, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5220874602083097694, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: verticalVelocity
       value: 1300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534547894790650320, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8911347012105169682, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_Name

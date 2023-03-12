@@ -13,7 +13,7 @@ public class Blinker : MonoBehaviour
 
     private void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();    
+        sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();    
     }
 
     // Update is called once per frame

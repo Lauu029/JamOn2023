@@ -17,4 +17,10 @@ public class Pies : MonoBehaviour
         if (collision.GetComponent<WallCollision>() == null)
             s.land();
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        //if (collision.GetComponent<WallCollision>() == null)
+            s.fall();
+    }
 }

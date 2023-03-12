@@ -1029,6 +1029,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2807342128478830737, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807342128478830737, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807342128653072403, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807342128653072403, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807342128653072403, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2807342128663994768, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
       propertyPath: landingPoint
       value: 

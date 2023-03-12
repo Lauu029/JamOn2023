@@ -27,8 +27,9 @@ public class MicLevelDetector : MonoBehaviour
     [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject text;
 
-    string[] phrases = { "Grita 'Cleon pirata somalí' hasta que se acabe el tiempo",
-                         "Grita 'Guille ...' hasta que se acabe el tiempo"};
+    string[] phrases = { "Grita '<color=red>Cleon pirata somalí</color>' hasta que se acabe el tiempo",
+                         "Grita '<color=red>Guille capataz de obra</color>' hasta que se acabe el tiempo",
+                         "Grita '<color=red>Pedro Pablo controlador aereo</color>' hasta que se acabe el tiempo"};
 
     private void Start()
     {

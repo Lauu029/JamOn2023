@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{f943e5cb-2fbb-4d60-a5fe-92b0ff9a7fec}">
+		<property name="assetPath">
+			<value>fastest-gun-in-the-8-bit-west-128-ytshorts.savetube.me.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>229.536</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fe74f890-817d-4fc1-8243-b124b916c824}</destination>
+		</relationship>
+	</object>
+</objects>

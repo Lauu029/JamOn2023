@@ -595,6 +595,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2807342128663994768, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: screamDb
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2807342128663994768, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
       propertyPath: landingPoint
       value: 
       objectReference: {fileID: 1525947843}

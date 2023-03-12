@@ -30,12 +30,11 @@ public class Pause : MonoBehaviour
 
     public void Options()
     {
-        pauseMenu.SetActive(true);
-        optionsMenu.SetActive(false);
+        optionsMenu.SetActive(true);
     }
 
     public void Quit()
     {
-        GameManager.instance.changeScene("MenuSeleccion");
+        GameManager.instance.changeScene("MenuPrincipal");
     }
 }

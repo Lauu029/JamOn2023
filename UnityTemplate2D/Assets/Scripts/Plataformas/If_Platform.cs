@@ -121,8 +121,8 @@ public class If_Platform : MonoBehaviour
         if (answer == buenarda)
         {
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
-            rb.gameObject.GetComponent<Movimiento>().enabled = true;
-            rb.gameObject.GetComponent<Salto>().enabled = true;
+            //rb.gameObject.GetComponent<Movimiento>().enabled = true;
+            //rb.gameObject.GetComponent<Salto>().enabled = true;
         }
         else
         {

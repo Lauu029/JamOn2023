@@ -50,10 +50,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        deathCanvas = transform.GetChild(0);
         _musicEvent = transform.GetComponent<FMODUnity.StudioEventEmitter>();
         _musicEvent.Play();
 
-        deathCanvas = transform.GetChild(0);
     }
 
     // Update is called once per frame

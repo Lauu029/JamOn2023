@@ -121,11 +121,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 200
-        width: 100
-        height: 100
+        y: 2834
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -141,12 +141,12 @@ TextureImporter:
       name: SPcarrera_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 200
-        width: 100
-        height: 100
+        x: 1417
+        y: 2834
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +162,12 @@ TextureImporter:
       name: SPcarrera_2
       rect:
         serializedVersion: 2
-        x: 200
-        y: 200
-        width: 100
-        height: 100
+        x: 2834
+        y: 2834
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,15 +180,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_3
+      name: SPcarrera_9
       rect:
         serializedVersion: 2
-        x: 300
-        y: 200
-        width: 100
-        height: 100
+        x: 4251
+        y: 2834
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +201,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_4
+      name: SPcarrera_3
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 1417
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_5
+      name: SPcarrera_4
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 1417
+        y: 1417
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,15 +243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_6
+      name: SPcarrera_5
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
+        x: 2834
+        y: 1417
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,15 +264,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_7
+      name: SPcarrera_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -285,15 +285,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_8
+      name: SPcarrera_7
       rect:
         serializedVersion: 2
-        x: 100
+        x: 1417
         y: 0
-        width: 100
-        height: 100
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -306,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPcarrera_9
+      name: SPcarrera_8
       rect:
         serializedVersion: 2
-        x: 200
+        x: 2834
         y: 0
-        width: 100
-        height: 100
+        width: 1417
+        height: 1417
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -338,15 +338,15 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       SPcarrera_0: 1477620180
-      SPcarrera_9: 334297632
-      SPcarrera_8: 1732154656
-      SPcarrera_4: -1468100269
+      SPcarrera_9: -1733726997
+      SPcarrera_8: 334297632
+      SPcarrera_4: 2032133363
       SPcarrera_2: -1188350290
-      SPcarrera_7: 1367192085
-      SPcarrera_3: -1733726997
-      SPcarrera_5: 2032133363
+      SPcarrera_7: 1732154656
+      SPcarrera_3: -1468100269
+      SPcarrera_5: -1034313493
       SPcarrera_1: -1179115000
-      SPcarrera_6: -1034313493
+      SPcarrera_6: 1367192085
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

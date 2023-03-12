@@ -151,7 +151,6 @@ MonoBehaviour:
   skins:
   - {fileID: 21300000, guid: 9f69e63275a601244b0e2298eb0cf356, type: 3}
   - {fileID: 21300000, guid: 59cd29ab9831a274c9f59776e0dce507, type: 3}
-  Nskins: 2
 --- !u!114 &2429981938487806875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +251,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: WRONG ANSWER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3db2aa2da3d14654c9226104bc196f26, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -316,6 +315,6 @@ MonoBehaviour:
   m_margin: {x: -450.02875, y: -232.02612, z: -448.75378, w: -232.0261}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}

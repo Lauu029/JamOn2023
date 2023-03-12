@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{660fb001-0a38-4bf5-93c1-f32063294ad9}">
+		<property name="assetPath">
+			<value>canon.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.6282312925170066</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fe74f890-817d-4fc1-8243-b124b916c824}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -136,6 +136,9 @@ public class GameManager : MonoBehaviour
 
     public Sprite getSkin()
     {
-        return skins[skinIndex];
+        if(skinIndex >= 0)
+            return skins[skinIndex];
+
+        return null;
     }
 }

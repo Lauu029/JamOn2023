@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class If_Platform : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class If_Platform : MonoBehaviour
     public float verticalPower; //Fuerza adicional en vertical par mandarlo mas para arriba que de lado
 
     bool interactable = false;
+    bool showing = false;
 
     string[] preguntas = { "¿Es Guille bajito?", "¿A que le huelen los sobacos a Carlos Leon?", "Los dedos de la mano, los dedos de los pies, lo cojones y la polla todos suman...",
         "¿El pimiento es una fruta?", "¿A que huelen los pingüinos", "¿Te comerias un culo por 50 millones de euros", "¿Cual es la mejor asociación del mundo?" };
@@ -62,7 +64,7 @@ public class If_Platform : MonoBehaviour
 
     private void Update()
     {
-        if (interactable && Input.GetKeyDown(KeyCode.S))
+        if (interactable && (Input.GetKeyDown(KeyCode.S) || Input.GetAxis("Vertical") < -0.1f) && !showing)
         {
             showQuestion();
         }
@@ -79,6 +81,7 @@ public class If_Platform : MonoBehaviour
 
     private void showQuestion()
     {
+        showing = true;
         Debug.Log(resp.Length);
         int question = Random.Range(0, preguntas.Length);
         canvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = preguntas[question];
@@ -87,6 +90,7 @@ public class If_Platform : MonoBehaviour
         int buena = Random.Range(0, 2);
         buenarda = buena;
 
+        EventSystem.current.SetSelectedGameObject(canvas.transform.GetChild(1).gameObject);
         if (buena == 0)
         {
             Debug.Log(resp[question].buena);
@@ -103,19 +107,28 @@ public class If_Platform : MonoBehaviour
         }
 
         canvas.SetActive(true);
+        rb.gameObject.GetComponent<Movimiento>().enabled = false;
+        rb.gameObject.GetComponent<Salto>().enabled = false;
+        rb.transform.GetChild(0).GetComponent<Animator>().SetFloat("Velocity", 0.0f);
     }
 
     public void checkAnswer(int answer)
     {
         if (answer == buenarda)
+        {
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
+            rb.gameObject.GetComponent<Movimiento>().enabled = true;
+            rb.gameObject.GetComponent<Salto>().enabled = true;
+        }
         else
         {
-            rb.gameObject.GetComponent<Movimiento>().enabled = false;
-            rb.gameObject.GetComponent<Salto>().enabled = false;
+            //rb.gameObject.GetComponent<Movimiento>().enabled = false;
+            //rb.gameObject.GetComponent<Salto>().enabled = false;
             GameManager.instance.showWrongAnswer();
             canvas.SetActive(false);
             interactable = false;
         }
+
+        showing = false;
     }
 }

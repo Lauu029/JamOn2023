@@ -573,6 +573,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.33215332
       objectReference: {fileID: 0}
+    - target: {fileID: 6367366910248424656, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa8e95d5437a5bd46a76f133264ff259, type: 3}
 --- !u!1 &689093630
@@ -692,7 +696,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.11764706, g: 0.11764706, b: 0.11764706, a: 0}
+  m_BackGroundColor: {r: 0.1764706, g: 0.1764706, b: 0.18823531, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -814,10 +818,6 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 59.87
       objectReference: {fileID: 0}
-    - target: {fileID: 2995606967783266226, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 334297632, guid: 7474c1736393e1141abba4e008772b69, type: 3}
     - target: {fileID: 2995606967783266226, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -1710,6 +1710,14 @@ PrefabInstance:
     - target: {fileID: 6547575255085648859, guid: 1cf2c0699895b2f4c8c561cb7b10c11c, type: 3}
       propertyPath: m_Offset.y
       value: -0.996053
+      objectReference: {fileID: 0}
+    - target: {fileID: 7320148012551236188, guid: 1cf2c0699895b2f4c8c561cb7b10c11c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025301093957513063, guid: 1cf2c0699895b2f4c8c561cb7b10c11c, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cf2c0699895b2f4c8c561cb7b10c11c, type: 3}

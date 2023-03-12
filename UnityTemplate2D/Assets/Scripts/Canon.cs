@@ -21,5 +21,7 @@ public class Canon : MonoBehaviour
 
         if(transform.GetChild(1).GetComponent<Animator>() != null)
             transform.GetChild(1).GetComponent<Animator>().SetTrigger("Shoot");
+
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Cañon");
     }
 }

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -115,7 +115,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: SPSrebote_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2834
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e6de84cc5a3bc47a07f579345c0e12
+      internalID: 1140117601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_1
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 2834
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3997bf9f1038df488094f2876bab1b4
+      internalID: 1259875887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_11
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 2834
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45891ea31ac9e6444acb3d143bcb1afc
+      internalID: 1586392050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_9
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 2834
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415ee6e744dc1024284a2c19c8717f13
+      internalID: 427139926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1417
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b66c63c0c68d9d4b9712656fb0b5218
+      internalID: -207050287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_4
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 1417
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eae0120db3e5a84a9630a0809caa35b
+      internalID: 1643199257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_5
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 1417
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53cd08f6d6dfaf6479c5dfce9e381ae4
+      internalID: -1719585898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_10
+      rect:
+        serializedVersion: 2
+        x: 4251
+        y: 1417
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99de8689f8606b4db3f3031772647a3
+      internalID: -863347136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7156e00d244c60e469bb5b6969734f9d
+      internalID: 2021847025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_7
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 0
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d43944d8f65904491fdf97c0868685
+      internalID: 1111544815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPSrebote_8
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 0
+        width: 1417
+        height: 1417
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f160146314e656e4085fd892c770c2ec
+      internalID: 2039906014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -126,7 +357,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SPSrebote_0: 1140117601
+      SPSrebote_9: 427139926
+      SPSrebote_6: 2021847025
+      SPSrebote_7: 1111544815
+      SPSrebote_1: 1259875887
+      SPSrebote_4: 1643199257
+      SPSrebote_11: 1586392050
+      SPSrebote_3: -207050287
+      SPSrebote_5: -1719585898
+      SPSrebote_8: 2039906014
+      SPSrebote_10: -863347136
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

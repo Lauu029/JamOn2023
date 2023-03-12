@@ -18,5 +18,8 @@ public class Canon : MonoBehaviour
         //rb.AddForce(dir * speedThrust);
 
         rb.AddForce(ayuda);
+
+        if(transform.GetChild(1).GetComponent<Animator>() != null)
+            transform.GetChild(1).GetComponent<Animator>().SetTrigger("Shoot");
     }
 }

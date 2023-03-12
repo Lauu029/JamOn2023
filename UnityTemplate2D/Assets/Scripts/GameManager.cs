@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour
 
     public void changeScene(string sc)
     {
-        timer = 0.0f;
         SceneManager.LoadScene(sc);
     }
 

@@ -47,6 +47,6 @@ public class Pause : MonoBehaviour
     public void Quit()
     {
         EventSystem.current.SetSelectedGameObject(null);
-        GameManager.instance.changeScene("MenuPrincipal");
+        GameManager.instance.changeScene("MenuSeleccion");
     }
 }

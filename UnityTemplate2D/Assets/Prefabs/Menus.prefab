@@ -1074,7 +1074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393901320663159729}
-  - component: {fileID: 7730117845758684792}
+  - component: {fileID: 8393901320663159742}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1104,7 +1104,7 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: 39}
   m_SizeDelta: {x: 285.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7730117845758684792
+--- !u!114 &8393901320663159742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1113,14 +1113,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393901320663159728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 3042406158241846749}
-    m_SelectOnDown: {fileID: 7739544895840390781}
+    m_SelectOnUp: {fileID: 8393901320933501442}
+    m_SelectOnDown: {fileID: 8393901321692787509}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1145,12 +1145,19 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 4960598317370214416}
-  m_OnClick:
+  m_FillRect: {fileID: 0}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3958583685616398564}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: Options
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: VolumeMasterController, Assembly-CSharp
+        m_MethodName: updateGlobalVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1159,7 +1166,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!1 &8393901320881524797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393901320933501445}
-  - component: {fileID: 3042406158241846749}
+  - component: {fileID: 8393901320933501442}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -1280,7 +1287,7 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: 198}
   m_SizeDelta: {x: 285.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &3042406158241846749
+--- !u!114 &8393901320933501442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1289,14 +1296,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393901320933501444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 7739544895840390781}
-    m_SelectOnDown: {fileID: 7730117845758684792}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 8393901320663159742}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1321,12 +1328,19 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6403098208599625440}
-  m_OnClick:
+  m_FillRect: {fileID: 0}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 0.5
+  m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3958583685616398564}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: Continue
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: VolumeMasterController, Assembly-CSharp
+        m_MethodName: updateGlobalVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1335,7 +1349,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!1 &8393901321009586732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,8 +1412,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 7739544895840390781}
-    m_SelectOnDown: {fileID: 3042406158241846749}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 8393901320933501442}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 0
@@ -1572,7 +1586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393901321692787508}
-  - component: {fileID: 7739544895840390781}
+  - component: {fileID: 8393901321692787509}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1602,7 +1616,7 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: -136}
   m_SizeDelta: {x: 285.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7739544895840390781
+--- !u!114 &8393901321692787509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1611,14 +1625,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393901321692787511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 7730117845758684792}
-    m_SelectOnDown: {fileID: 3042406158241846749}
+    m_SelectOnUp: {fileID: 8393901320663159742}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1643,12 +1657,19 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3803872255548104105}
-  m_OnClick:
+  m_FillRect: {fileID: 0}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 1
+  m_WholeNumbers: 0
+  m_Value: 1
+  m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3958583685616398564}
-        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
-        m_MethodName: Quit
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: VolumeMasterController, Assembly-CSharp
+        m_MethodName: updateGlobalVolume
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1657,7 +1678,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
 --- !u!1001 &402329350854929208
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -103,11 +103,11 @@ public class If_Platform : MonoBehaviour
         {
 
             string respuestaMala = "<color=#549cd6>string</color>" + "<color=#9cdcfe> sol" + "<color=#b4b4b4> = </color>" + "<color=#d69b73>\"" + resp[question].mala + "\"</color>";
-            canvas.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaMala;
+            canvas.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaMala;
           
 
             string respuestaBuena = "<color=#549cd6>string</color>" + "<color=#9cdcfe> sol" + "<color=#b4b4b4> = </color>" + "<color=#d69b73>\"" + resp[question].buena + "\"</color>";
-            canvas.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaBuena;
+            canvas.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaBuena;
 
         }
         canvas.SetActive(true);

@@ -8,7 +8,6 @@ public class WearSkin : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("ME pongo el sombrero");
         cabeza.GetComponent<SpriteRenderer>().sprite = GameManager.instance.getSkin();
     }
 }

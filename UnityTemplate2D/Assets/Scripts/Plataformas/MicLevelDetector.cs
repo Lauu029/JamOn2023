@@ -1,5 +1,7 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 public class MicLevelDetector : MonoBehaviour
 {
     [SerializeField] private float _maxDb = 0;
@@ -23,6 +25,10 @@ public class MicLevelDetector : MonoBehaviour
 
     [SerializeField] private Slider leftTimeBar;
     [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject text;
+
+    string[] phrases = { "Grita 'Cleon pirata somalí' hasta que se acabe el tiempo",
+                         "Grita 'Guille ...' hasta que se acabe el tiempo"};
 
     private void Start()
     {
@@ -41,6 +47,7 @@ public class MicLevelDetector : MonoBehaviour
         if (interactable && Input.GetKeyDown(KeyCode.S))
         {
             screaming = true;
+            text.GetComponent<TextMeshProUGUI>().text = phrases[Random.Range(0, phrases.Length)];
             canvas.SetActive(true);
         }
 

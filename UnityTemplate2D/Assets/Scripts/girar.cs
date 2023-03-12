@@ -9,6 +9,7 @@ public class girar : MonoBehaviour
     float totalRot = -1.0f;
 
     public controlaSkins cS;
+    public monedaActu mon;
 
     bool spinning = false;
     public void spin()
@@ -16,6 +17,10 @@ public class girar : MonoBehaviour
         spinning = true;
 
         totalRot = Random.Range(2000.0f, 3000.0f);
+
+        GameManager.instance.useCoin();
+
+        mon.actualiza();
     }
 
     private void Update()
@@ -26,9 +31,9 @@ public class girar : MonoBehaviour
             accumulatedRot += spinRation;
             spinRation -= 0.005f;
             if (spinRation < 0.2f) spinRation = 0.2f; 
+        
         }
-
-        if (accumulatedRot >= totalRot)
+        else if (accumulatedRot >= totalRot)
         {
             cS.showSkins();
             spinning = false;

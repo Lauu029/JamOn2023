@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class Salto : MonoBehaviour
 {
@@ -62,8 +63,9 @@ public class Salto : MonoBehaviour
             onLand = false;
         }
 
-        if (!onLandSide && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Keypad0)))
+        if (!onLandSide && (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Keypad0) || Input.GetButton("Fire1")))
         {
+            //Debug.Log("salta");
             rb.AddForce(currentForce);
 
             //Hasta que ya no le quede fuerza

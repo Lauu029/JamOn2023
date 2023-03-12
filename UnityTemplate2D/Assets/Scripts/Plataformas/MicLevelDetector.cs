@@ -46,11 +46,14 @@ public class MicLevelDetector : MonoBehaviour
     private void Update()
     {
 
-        if (interactable && Input.GetKeyDown(KeyCode.S))
+        if (interactable && (Input.GetKeyDown(KeyCode.S) || Input.GetAxis("Vertical") < -0.1f) && !screaming)
         {
             screaming = true;
             text.GetComponent<TextMeshProUGUI>().text = phrases[Random.Range(0, phrases.Length)];
             canvas.SetActive(true);
+            rb.gameObject.GetComponent<Movimiento>().enabled = false;
+            rb.gameObject.GetComponent<Salto>().enabled = false;
+            rb.transform.GetChild(0).GetComponent<Animator>().SetFloat("Velocity", 0.0f);
         }
 
         if (Microphone.IsRecording(_microphoneName))
@@ -80,6 +83,8 @@ public class MicLevelDetector : MonoBehaviour
         {
             GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
             canvas.SetActive(false);
+            rb.gameObject.GetComponent<Movimiento>().enabled = true;
+            rb.gameObject.GetComponent<Salto>().enabled = true;
             this.enabled = false;
         }
 

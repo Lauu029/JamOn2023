@@ -42,7 +42,7 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""id"": ""bd94191f-1e01-4958-b5c2-b55cd37f697c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
@@ -183,6 +183,17 @@ public partial class @PlayerController : IInputActionCollection2, IDisposable
                     ""name"": """",
                     ""id"": ""9a2f8815-0491-4725-bd3d-6007ed04429e"",
                     ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a4a5d365-8460-4802-9281-3bdbd71189d2"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

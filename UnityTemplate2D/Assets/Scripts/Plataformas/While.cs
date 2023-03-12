@@ -19,11 +19,26 @@ public class While : MonoBehaviour
     float speedThrust;
 
     Rigidbody2D rb;
+    private PlayerController playerActions;
+
+    [SerializeField]
+    int pressesNeeded = 15;
+
+    int presses = 0;
+    private void Awake()
+    {
+        playerActions = new PlayerController();
+    }
+
     void ButtonCheck()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetButtonUp("Fire3")||Input.GetKeyUp(KeyCode.E))
         {
-            GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
+            presses++;
+            transform.GetChild(0).GetComponent<Animation>().Play();
+            Debug.Log(presses);
+            if (presses >= pressesNeeded)
+                GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
         }
     }
 
@@ -31,8 +46,8 @@ public class While : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Movimiento>() != null)
         {
-            timeWaiting = 0;
             rb = collision.gameObject.GetComponent<Rigidbody2D>();
+            transform.GetChild(0).gameObject.SetActive(true);
         }
     }
 
@@ -40,13 +55,7 @@ public class While : MonoBehaviour
     {
         if (rb != null)
         {
-            timeWaiting += Time.deltaTime;
-
-            if (timeWaiting > timeToJump)
-            {
-                transform.GetChild(0).gameObject.SetActive(true);
-                ButtonCheck();
-            }
+            ButtonCheck();
         }
     }
 
@@ -54,7 +63,7 @@ public class While : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<Movimiento>() != null)
         {
-            timeWaiting = -1;
+            presses = 0;
             rb = null;
             transform.GetChild(0).gameObject.SetActive(false);
         }

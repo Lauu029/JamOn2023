@@ -149,7 +149,14 @@ public class GameManager : MonoBehaviour
 
     private void actualizaTimer() { timoty.GetComponent<TextMeshProUGUI>().text = timer.ToString(); }
 
-    public void comparaTiempos() { if (timer < bestTime) gachaMonedas++; }
+    public void comparaTiempos() {
+        if (timer < bestTime)
+        {
+            gachaMonedas++;
+            bestTime = timer;
+        }
+    }
+
 
     public void setTimer(GameObject g) { timoty = g; }
 

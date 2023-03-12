@@ -124,7 +124,7 @@ public class If_Platform : MonoBehaviour
         {
             //rb.gameObject.GetComponent<Movimiento>().enabled = false;
             //rb.gameObject.GetComponent<Salto>().enabled = false;
-            GameManager.instance.showWrongAnswer();
+            GameManager.instance.showDeath("Wrong answer");
             canvas.SetActive(false);
             interactable = false;
         }

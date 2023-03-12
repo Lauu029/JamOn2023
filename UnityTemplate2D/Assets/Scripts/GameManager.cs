@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -80,9 +81,11 @@ public class GameManager : MonoBehaviour
         goToLevel(next);
     }
 
-    public void showWrongAnswer()
+    public void showDeath(string msg)
     {
         deathCanvas.GetChild(0).gameObject.SetActive(true);
+        deathCanvas.GetChild(1).gameObject.SetActive(true);
+        deathCanvas.GetChild(1).GetComponent<TextMeshProUGUI>().text = msg;
         deadTime = 0;
     }
 
@@ -111,25 +114,14 @@ public class GameManager : MonoBehaviour
             while (unlockedSkins[i]) i = Random.Range(0, skins.Length);
 
             unlockedSkins[i] = true;
-
-            for(int j = 0; j < skins.Length; j++)
-            {
-                Debug.Log(unlockedSkins[j]);
-            }
         }
     }
 
     public void selectSkin(int i)
     {
 
-        for (int j = 0; j < skins.Length; j++)
-        {
-            Debug.Log(unlockedSkins[j]);
-        }
-
         if (unlockedSkins[i])
         {
-            Debug.Log("Cabeza");
             skinIndex = i;
         }
     }
@@ -141,4 +133,6 @@ public class GameManager : MonoBehaviour
 
         return null;
     }
+
+    public bool[] getunlockSkins() { return unlockedSkins; }
 }

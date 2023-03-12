@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ruletea : MonoBehaviour
 {
-    private void Awake()
+    public void Rula()
     {
         GameManager.instance.unlockSkins();
     }

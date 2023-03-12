@@ -19,6 +19,14 @@ public class GameManager : MonoBehaviour
     float timeToReload = 2;
 
     Transform deathCanvas;
+
+    public Sprite[] skins;
+    bool[] unlockedSkins = new bool[50];
+
+    Sprite currentSkin = null;
+
+    int gachaMonedas = 2;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -92,5 +100,29 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
         else
             Time.timeScale = 1;
+    }
+
+    public void unlockSkins()
+    {
+        int i = Random.Range(0,unlockedSkins.Length);
+        while (unlockedSkins[i]) i = Random.Range(0, unlockedSkins.Length);
+
+        unlockedSkins[i] = true;
+
+        Debug.Log(unlockedSkins[i]);
+    }
+
+    public void selectSkin(int i)
+    {
+        Debug.Log(unlockedSkins.Length);
+        if (unlockedSkins[i])
+        {
+            currentSkin = skins[i];
+        }
+    }
+
+    public Sprite getSkin()
+    {
+        return currentSkin;
     }
 }

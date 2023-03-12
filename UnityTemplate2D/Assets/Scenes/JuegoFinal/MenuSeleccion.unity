@@ -209,14 +209,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: goToLevel
-        m_Mode: 3
+        m_MethodName: changeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 1
           m_FloatArgument: 0
-          m_StringArgument: Plataformas
+          m_StringArgument: Level1
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &109208162
@@ -823,14 +823,14 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: goToLevel
-        m_Mode: 3
+        m_MethodName: changeScene
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: Plataformas
+          m_StringArgument: Level2
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &1109221959

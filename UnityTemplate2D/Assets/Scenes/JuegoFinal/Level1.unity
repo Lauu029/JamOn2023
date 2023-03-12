@@ -624,6 +624,26 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7739544895840390781, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739544895840390781, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}
+    - target: {fileID: 7739544895840390781, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739544895840390781, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7739544895840390781, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: MenuPrincipal
+      objectReference: {fileID: 0}
     - target: {fileID: 8167816385760271275, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -678,6 +698,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8393901320792050948, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
       propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393901320881524797, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8393901321643705388, guid: 926442d2fbaade142bdd9bcebd0ee321, type: 3}

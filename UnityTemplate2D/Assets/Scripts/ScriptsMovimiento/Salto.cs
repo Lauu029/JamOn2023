@@ -33,6 +33,7 @@ public class Salto : MonoBehaviour
         if (playerActions.Player.Jump.triggered)
         {
             jumping = true;
+            transform.GetChild(0).GetComponent<Animator>().SetTrigger("Jump");
             FMODUnity.RuntimeManager.PlayOneShot("event:/Salto");
         }
     }
@@ -52,6 +53,7 @@ public class Salto : MonoBehaviour
             //Si estamos en la pared, añadimos fuerza horizontal
             if (OnLandSide)
             {
+                transform.GetChild(0).GetComponent<Animator>().SetBool("Wall", false);
                 if (transform.position.x > 0)
                     rb.AddForce(-jumpVecSide);
                 else
@@ -80,6 +82,7 @@ public class Salto : MonoBehaviour
         onLand = true;
         onLandSide = false;
         GetComponent<Movimiento>().enabled = true;
+        transform.GetChild(0).GetComponent<Animator>().SetTrigger("Land");
     }
 
     public void landSide()
@@ -88,6 +91,7 @@ public class Salto : MonoBehaviour
         {
             onLandSide = true;
             GetComponent<Movimiento>().enabled = false;
+            transform.GetChild(0).GetComponent<Animator>().SetBool("Wall", true);
         }
 
     }

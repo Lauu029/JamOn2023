@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IdleToRun
+  m_Name: AterrizaQ
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,7 +20,7 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -1293078277, guid: 6088d58962698a148874551278b0e4be, type: 3}
+      value: {fileID: 1595307185, guid: 7304f588f3225cd4f9c6d258acb46cae, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -40,7 +40,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -1293078277, guid: 6088d58962698a148874551278b0e4be, type: 3}
+    - {fileID: 1595307185, guid: 7304f588f3225cd4f9c6d258acb46cae, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

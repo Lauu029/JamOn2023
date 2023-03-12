@@ -808,10 +808,6 @@ PrefabInstance:
       value: 59.87
       objectReference: {fileID: 0}
     - target: {fileID: 2995606967783266226, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 334297632, guid: 7474c1736393e1141abba4e008772b69, type: 3}
-    - target: {fileID: 2995606967783266226, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}

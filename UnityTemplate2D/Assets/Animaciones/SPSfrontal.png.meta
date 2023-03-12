@@ -121,9 +121,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 100
-        width: 100
-        height: 100
+        y: 1417
+        width: 1417
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: SPSfrontal_1
       rect:
         serializedVersion: 2
-        x: 100
-        y: 100
-        width: 100
-        height: 100
+        x: 1417
+        y: 1417
+        width: 1417
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,13 +159,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPSfrontal_2
+      name: SPSfrontal_4
       rect:
         serializedVersion: 2
-        x: 200
-        y: 100
-        width: 100
-        height: 100
+        x: 2834
+        y: 1417
+        width: 1417
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,13 +180,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPSfrontal_3
+      name: SPSfrontal_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 1417
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,13 +201,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPSfrontal_4
+      name: SPSfrontal_3
       rect:
         serializedVersion: 2
-        x: 100
+        x: 1417
         y: 0
-        width: 100
-        height: 100
+        width: 1417
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +225,10 @@ TextureImporter:
       name: SPSfrontal_5
       rect:
         serializedVersion: 2
-        x: 200
+        x: 2834
         y: 0
-        width: 100
-        height: 100
+        width: 1417
+        height: 1417
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -253,11 +253,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPSfrontal_4: -631594801
+      SPSfrontal_4: 1891790776
       SPSfrontal_1: 461416042
       SPSfrontal_5: 1595307185
-      SPSfrontal_3: 1632208079
-      SPSfrontal_2: 1891790776
+      SPSfrontal_3: -631594801
+      SPSfrontal_2: 1632208079
       SPSfrontal_0: 1514436244
   spritePackingTag: 
   pSDRemoveMatte: 0

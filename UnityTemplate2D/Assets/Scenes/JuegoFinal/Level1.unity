@@ -222,6 +222,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6800b5abdd6f3d148b9c6cb8efd5e612, type: 3}
+--- !u!1 &236515398 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3660816735366105923, guid: 6800b5abdd6f3d148b9c6cb8efd5e612, type: 3}
+  m_PrefabInstance: {fileID: 1557342144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &353517159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -781,6 +786,10 @@ PrefabInstance:
     - target: {fileID: 1339814002451321346, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: maxVelocity
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339814002451321346, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
+      propertyPath: velocityFactor
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1339814002451321346, guid: c8b4a64033cb09c43bc6fe8083db3b34, type: 3}
       propertyPath: initialVelocity
@@ -2185,6 +2194,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.7803192
       objectReference: {fileID: 0}
+    - target: {fileID: 3660816735366105926, guid: 6800b5abdd6f3d148b9c6cb8efd5e612, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3660816735366105927, guid: 6800b5abdd6f3d148b9c6cb8efd5e612, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2617,6 +2630,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3660816735366105927, guid: 6800b5abdd6f3d148b9c6cb8efd5e612, type: 3}
   m_PrefabInstance: {fileID: 1557342144}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1992446736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236515398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759c9299265a94141bbedfc8246118df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2006303484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2627,6 +2652,10 @@ PrefabInstance:
     - target: {fileID: 8757688753829822257, guid: 3c4ae81e9406e554897770454660f9a6, type: 3}
       propertyPath: m_Name
       value: Comentario
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757688753829822269, guid: 3c4ae81e9406e554897770454660f9a6, type: 3}
+      propertyPath: timeToDisappear
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8757688753829822270, guid: 3c4ae81e9406e554897770454660f9a6, type: 3}
       propertyPath: m_Enabled

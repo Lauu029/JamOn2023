@@ -29,7 +29,8 @@ public class MicLevelDetector : MonoBehaviour
 
     string[] phrases = { "Grita '<color=red>Cleon pirata somalí</color>' hasta que se acabe el tiempo",
                          "Grita '<color=red>Guille capataz de obra</color>' hasta que se acabe el tiempo",
-                         "Grita '<color=red>Pedro Pablo controlador aereo</color>' hasta que se acabe el tiempo"};
+                         "Grita '<color=red>Pedro Pablo controlador aereo</color>' hasta que se acabe el tiempo",
+                         "<color=red>Gime</color> hasta que se acabe el tiempo"};
 
     private void Start()
     {

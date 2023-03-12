@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class GameManager : MonoBehaviour
 
     int gachaMonedas = 2;
 
+    GameObject timoty;
+    float timer = 0.0f;
+    float bestTime = 100000.0f;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -53,6 +58,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timoty != null)
+        {
+            timer += Time.deltaTime;
+            actualizaTimer();
+        }
+
         if (deadTime > -1)
         {
             deadTime += Time.deltaTime;
@@ -125,11 +136,21 @@ public class GameManager : MonoBehaviour
 
     public Sprite getSkin()
     {
-        if(skinIndex >= 0)
+        if (skinIndex >= 0)
             return skins[skinIndex];
 
         return null;
     }
 
     public bool[] getunlockSkins() { return unlockedSkins; }
+
+    private void actualizaTimer() { timoty.GetComponent<TextMeshProUGUI>().text = timer.ToString(); }
+
+    public void comparaTiempos() { if (timer < bestTime) gachaMonedas++; }
+
+    public void setTimer(GameObject g) { timoty = g; }
+
+    public int getCoins() { return gachaMonedas; }
+
+    public void useCoin() { gachaMonedas--; }
 }

@@ -82,10 +82,8 @@ public class If_Platform : MonoBehaviour
     private void showQuestion()
     {
         showing = true;
-        Debug.Log(resp.Length);
         int question = Random.Range(0, preguntas.Length);
         canvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = preguntas[question];
-        Debug.Log(preguntas[question]);
 
         int buena = Random.Range(0, 2);
         buenarda = buena;
@@ -93,16 +91,15 @@ public class If_Platform : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(canvas.transform.GetChild(1).gameObject);
         if (buena == 0)
         {
-            Debug.Log(resp[question].buena);
             canvas.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].buena;
-            Debug.Log(resp[question].mala);
+
             canvas.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].mala;
         }
         else
         {
-            Debug.Log(resp[question].mala);
+
             canvas.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].mala;
-            Debug.Log(resp[question].buena);
+
             canvas.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].buena;
         }
 

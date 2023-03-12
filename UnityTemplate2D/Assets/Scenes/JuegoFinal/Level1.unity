@@ -3009,6 +3009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Comentario
       objectReference: {fileID: 0}
+    - target: {fileID: 8757688753829822268, guid: 3c4ae81e9406e554897770454660f9a6, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.83
+      objectReference: {fileID: 0}
     - target: {fileID: 8757688753829822269, guid: 3c4ae81e9406e554897770454660f9a6, type: 3}
       propertyPath: timeToBlink
       value: 2.5

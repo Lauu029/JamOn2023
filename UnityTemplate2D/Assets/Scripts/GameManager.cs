@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    bool paused = false;
+
     int actualLevel = 1;
 
     float deadTime = -1;
@@ -75,5 +77,14 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < deathCanvas.childCount; ++i)
             deathCanvas.GetChild(i).gameObject.SetActive(false);
         deadTime = -1;
+    }
+
+    public void togglePause()
+    {
+        paused = !paused;
+        if (paused)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
     }
 }

@@ -23,11 +23,7 @@ public class While : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Vector2 dir = new Vector2(landingPoint.position.x, landingPoint.position.y) - new Vector2(transform.position.x, transform.position.y);
-            dir.Normalize();
-
-            dir.y += verticalPower;
-            rb.AddForce(dir * speedThrust);
+            GetComponent<Canon>().shoot(landingPoint, rb, speedThrust, verticalPower);
         }
     }
 

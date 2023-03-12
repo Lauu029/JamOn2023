@@ -386,6 +386,7 @@ GameObject:
   - component: {fileID: 665626008}
   - component: {fileID: 665626007}
   - component: {fileID: 665626006}
+  - component: {fileID: 665626009}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -507,6 +508,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665626003}
   m_CullTransparentMesh: 1
+--- !u!114 &665626009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665626003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1198092674
+      Data2: 1141923952
+      Data3: -325800058
+      Data4: -703491733
+    Path: "event:/Ca\xF1on"
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &779213345
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +552,7 @@ GameObject:
   - component: {fileID: 779213348}
   - component: {fileID: 779213347}
   - component: {fileID: 779213351}
+  - component: {fileID: 779213352}
   m_Layer: 5
   m_Name: OptionsButton
   m_TagString: Untagged
@@ -715,6 +747,36 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &779213352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779213345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1456021800
+      Data2: 1191933128
+      Data3: -350250846
+      Data4: -290459293
+    Path: event:/Boton
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &995331897
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +880,7 @@ GameObject:
   - component: {fileID: 1602249639}
   - component: {fileID: 1602249638}
   - component: {fileID: 1602249643}
+  - component: {fileID: 1602249644}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -1000,6 +1063,36 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1602249644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602249636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1456021800
+      Data2: 1191933128
+      Data3: -350250846
+      Data4: -290459293
+    Path: event:/Boton
+  Event: 
+  PlayEvent: 15
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!114 &1636656994 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4714485020096496931, guid: ae44080e692adee4e8e8935a5641555c, type: 3}

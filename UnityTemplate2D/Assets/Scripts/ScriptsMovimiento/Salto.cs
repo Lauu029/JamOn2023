@@ -33,6 +33,7 @@ public class Salto : MonoBehaviour
         if (playerActions.Player.Jump.triggered)
         {
             jumping = true;
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Salto");
         }
     }
 

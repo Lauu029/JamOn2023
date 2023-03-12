@@ -73,11 +73,13 @@ public class GameManager : MonoBehaviour
     public void changeScene(string sc)
     {
         SceneManager.LoadScene(sc);
+        timer = 0.0f;
     }
 
     public void goToLevel(int level)
     {
         actualLevel = level;
+        timer = 0.0f;
         SceneManager.LoadScene("Level" + level);
         instance.GetComponent<FMODUnity.StudioEventEmitter>().SetParameter("Level", level);
     }
@@ -101,6 +103,7 @@ public class GameManager : MonoBehaviour
     public void reloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        timer = 0.0f;
         for (int i = 0; i < deathCanvas.childCount; ++i)
             deathCanvas.GetChild(i).gameObject.SetActive(false);
         deadTime = -1;
@@ -161,4 +164,6 @@ public class GameManager : MonoBehaviour
     public int getCoins() { return gachaMonedas; }
 
     public void useCoin() { gachaMonedas--; }
+
+    public void quitGame() { Application.Quit(); }
 }

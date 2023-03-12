@@ -385,8 +385,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e147d73ac9e23174fb7a2ea14b751262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 0}
-  optionsMenu: {fileID: 0}
+  pauseMenu: {fileID: 8393901320881524797}
+  optionsMenu: {fileID: 3510447333343680972}
 --- !u!1 &7578108884083142054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393901320663159729}
-  - component: {fileID: 8393901320663159742}
+  - component: {fileID: 8693681189958696489}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -1104,7 +1104,7 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: 39}
   m_SizeDelta: {x: 285.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8393901320663159742
+--- !u!114 &8693681189958696489
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1113,14 +1113,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393901320663159728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 8393901320933501442}
-    m_SelectOnDown: {fileID: 8393901321692787509}
+    m_SelectOnUp: {fileID: 6450170048344422477}
+    m_SelectOnDown: {fileID: 3354095827539232738}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1145,19 +1145,12 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 4960598317370214416}
-  m_FillRect: {fileID: 0}
-  m_HandleRect: {fileID: 0}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 1
-  m_OnValueChanged:
+  m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VolumeMasterController, Assembly-CSharp
-        m_MethodName: updateGlobalVolume
+      - m_Target: {fileID: 3958583685616398564}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: Options
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1184,7 +1177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8393901320881524794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1257,7 +1250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393901320933501445}
-  - component: {fileID: 8393901320933501442}
+  - component: {fileID: 6450170048344422477}
   m_Layer: 5
   m_Name: Continue
   m_TagString: Untagged
@@ -1287,7 +1280,7 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: 198}
   m_SizeDelta: {x: 285.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8393901320933501442
+--- !u!114 &6450170048344422477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1296,14 +1289,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393901320933501444}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 8393901320663159742}
+    m_SelectOnUp: {fileID: 3354095827539232738}
+    m_SelectOnDown: {fileID: 8693681189958696489}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1328,19 +1321,12 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6403098208599625440}
-  m_FillRect: {fileID: 0}
-  m_HandleRect: {fileID: 0}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0.5
-  m_OnValueChanged:
+  m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VolumeMasterController, Assembly-CSharp
-        m_MethodName: updateGlobalVolume
+      - m_Target: {fileID: 3958583685616398564}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: Continue
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1412,8 +1398,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 8393901320933501442}
+    m_SelectOnUp: {fileID: 3354095827539232738}
+    m_SelectOnDown: {fileID: 6450170048344422477}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 0
@@ -1586,7 +1572,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8393901321692787508}
-  - component: {fileID: 8393901321692787509}
+  - component: {fileID: 3354095827539232738}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -1616,7 +1602,7 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: -136}
   m_SizeDelta: {x: 285.2, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8393901321692787509
+--- !u!114 &3354095827539232738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1625,14 +1611,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8393901321692787511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 8393901320663159742}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 8693681189958696489}
+    m_SelectOnDown: {fileID: 6450170048344422477}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
@@ -1657,19 +1643,12 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 3803872255548104105}
-  m_FillRect: {fileID: 0}
-  m_HandleRect: {fileID: 0}
-  m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 1
-  m_OnValueChanged:
+  m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: VolumeMasterController, Assembly-CSharp
-        m_MethodName: updateGlobalVolume
+      - m_Target: {fileID: 3958583685616398564}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
+        m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1826,6 +1805,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3828835018626851752, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828835018626851752, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3958583685616398564}
+    - target: {fileID: 3828835018626851752, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: closeOptions
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828835018626851752, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Pause, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3828835018786941082, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -1843,5 +1838,10 @@ PrefabInstance:
 --- !u!224 &3510447333343680971 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3828835017652515571, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
+  m_PrefabInstance: {fileID: 402329350854929208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3510447333343680972 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3828835017652515572, guid: 5664f6da4b8018741bc1bb7cc779db6b, type: 3}
   m_PrefabInstance: {fileID: 402329350854929208}
   m_PrefabAsset: {fileID: 0}

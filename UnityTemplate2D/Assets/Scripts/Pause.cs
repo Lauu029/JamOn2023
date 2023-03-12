@@ -47,6 +47,13 @@ public class Pause : MonoBehaviour
     public void Quit()
     {
         EventSystem.current.SetSelectedGameObject(null);
-        GameManager.instance.changeScene("MenuSeleccion");
+        GameManager.instance.changeScene("MenuPrincipal");
+    }
+
+    public void closeOptions()
+    {
+        optionsMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(pauseMenu.transform.GetChild(1).gameObject);
+
     }
 }

@@ -20,7 +20,10 @@ public class Canon : MonoBehaviour
         rb.AddForce(ayuda);
         rb.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Jump");
 
-        if(transform.GetChild(1).GetComponent<Animator>() != null)
+        rb.transform.GetComponent<Movimiento>().enabled = true;
+        rb.transform.GetComponent<Salto>().enabled = true;
+
+        if (transform.GetChild(1).GetComponent<Animator>() != null)
             transform.GetChild(1).GetComponent<Animator>().SetTrigger("Shoot");
 
         FMODUnity.RuntimeManager.PlayOneShot("event:/Cañon");

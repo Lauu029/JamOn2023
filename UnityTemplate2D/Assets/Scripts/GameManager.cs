@@ -111,25 +111,14 @@ public class GameManager : MonoBehaviour
             while (unlockedSkins[i]) i = Random.Range(0, skins.Length);
 
             unlockedSkins[i] = true;
-
-            for(int j = 0; j < skins.Length; j++)
-            {
-                Debug.Log(unlockedSkins[j]);
-            }
         }
     }
 
     public void selectSkin(int i)
     {
 
-        for (int j = 0; j < skins.Length; j++)
-        {
-            Debug.Log(unlockedSkins[j]);
-        }
-
         if (unlockedSkins[i])
         {
-            Debug.Log("Cabeza");
             skinIndex = i;
         }
     }
@@ -141,4 +130,6 @@ public class GameManager : MonoBehaviour
 
         return null;
     }
+
+    public bool[] getunlockSkins() { return unlockedSkins; }
 }

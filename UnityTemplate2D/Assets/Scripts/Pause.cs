@@ -14,7 +14,7 @@ public class Pause : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Start"))
         {
             pauseMenu.SetActive(!pauseMenu.activeInHierarchy);
             optionsMenu.SetActive(false);
@@ -48,6 +48,7 @@ public class Pause : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
         GameManager.instance.changeScene("MenuPrincipal");
+        GameManager.instance.togglePause();
     }
 
     public void closeOptions()

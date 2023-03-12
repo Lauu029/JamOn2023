@@ -81,28 +81,35 @@ public class If_Platform : MonoBehaviour
 
     private void showQuestion()
     {
+
         showing = true;
         int question = Random.Range(0, preguntas.Length);
-        canvas.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = preguntas[question];
+        canvas.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = "<color=#d69b73>\"" + preguntas[question] + "\"</color>";
 
         int buena = Random.Range(0, 2);
         buenarda = buena;
 
-        EventSystem.current.SetSelectedGameObject(canvas.transform.GetChild(1).gameObject);
+        EventSystem.current.SetSelectedGameObject(canvas.transform.GetChild(2).gameObject);
+
         if (buena == 0)
         {
-            canvas.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].buena;
+            string respuestaBuena = "<color=#549cd6>string</color>" + "<color=#9cdcfe> sol" + "<color=#b4b4b4> = </color>" + "<color=#d69b73>\"" + resp[question].buena + "\"</color>";
+            canvas.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaBuena;
 
-            canvas.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].mala;
+            string respuestaMala = "<color=#549cd6>string</color>" +"<color=#9cdcfe> sol" + "<color=#b4b4b4> = </color>" + "<color=#d69b73>\"" + resp[question].mala + "\"</color>";
+            canvas.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaMala;
         }
         else
         {
 
-            canvas.transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].mala;
+            string respuestaMala = "<color=#549cd6>string</color>" + "<color=#9cdcfe> sol" + "<color=#b4b4b4> = </color>" + "<color=#d69b73>\"" + resp[question].mala + "\"</color>";
+            canvas.transform.GetChild(4).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaMala;
+          
 
-            canvas.transform.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = resp[question].buena;
+            string respuestaBuena = "<color=#549cd6>string</color>" + "<color=#9cdcfe> sol" + "<color=#b4b4b4> = </color>" + "<color=#d69b73>\"" + resp[question].buena + "\"</color>";
+            canvas.transform.GetChild(3).GetChild(0).GetComponent<TextMeshProUGUI>().text = respuestaBuena;
+
         }
-
         canvas.SetActive(true);
         rb.gameObject.GetComponent<Movimiento>().enabled = false;
         rb.gameObject.GetComponent<Salto>().enabled = false;
@@ -125,7 +132,7 @@ public class If_Platform : MonoBehaviour
             canvas.SetActive(false);
             interactable = false;
         }
-
+        //EventSystem.current.SetSelectedGameObject(null);
         showing = false;
     }
 }
